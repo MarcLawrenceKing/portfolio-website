@@ -1,0 +1,42 @@
+.hero {
+  margin: 0;
+  background-color: #bacdb0;
+}
+
+h1 {
+  margin-left: 90px;
+  margin-top: 80px;
+  font-size: 60px;
+  color: #475b63;
+  width: 1000px;
+  font-family: 'Arial', sans-serif;
+}
+
+#my-name {
+  color: #2e2c2f;
+  font-size: 80px;
+}
+
+#my-job-desc{
+  color: #729b79;
+}
+
+h2 {
+  margin-left: 90px;
+  margin-top: 10px;
+  font-size: 25px;
+  color: #2e2c2f;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 800px;  
+}
+
+.profile-section {
+  display: grid;
+  width: 600px;
+  grid-template-columns: 100px 100px 100px 100px;
+  gap: 10px;
+  margin-top: 40px;
+  margin-left: 90px;
+  margin-bottom: 20px;
+
+}

@@ -1,0 +1,33 @@
+.button{
+  margin: 10px;
+  padding: 15px;
+  border: 2px solid black;
+  border-radius: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  height: 80px;
+  width: 140px;
+}
+
+.button:hover {
+  background-color: #d6e1d0;
+}
+.button:active {
+  background-color: #eaf0e7	;
+}
+
+.button.navbar-btn{
+  background-color: #bacdb0;
+  color: #475b63;
+}
+
+.button.download-btn{
+  background-color: #729b79;
+  color: #f3e8ee;
+  width: 690px;
+  margin-left: 90px;
+  margin-bottom: 80px;
+  border-radius: 50px;
+}
+
