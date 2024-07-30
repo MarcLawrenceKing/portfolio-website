@@ -1,7 +1,14 @@
 .img.hero-image{
   height: 660px;
   position:absolute;
-  top: 180px;
-  right: 5%;
+  top: 22%;
+  right: 6%;
   border-radius: 350px;
+}
+
+.img.project-image{
+  height: 239px;
+  width: 179px;
+  position:absolute;
+  border-radius: 10px;
 }

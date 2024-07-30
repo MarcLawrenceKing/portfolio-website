@@ -1,25 +1,25 @@
 .button{
   margin: 10px;
   padding: 15px;
-  border: 2px solid black;
+  border: 1.5px solid black;
   border-radius: 15px;
   font-size: 25px;
   font-weight: bold;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  height: 80px;
+  height: 65px;
   width: 140px;
 }
 
-.button:hover {
-  background-color: #d6e1d0;
-}
-.button:active {
-  background-color: #eaf0e7	;
+.button.navbar-btn{
+  background-color: #c1d2b8;
+  color: #475b63;
 }
 
-.button.navbar-btn{
-  background-color: #bacdb0;
-  color: #475b63;
+.button.navbar-btn:hover {
+  background-color: #d6e1d0;
+}
+.button.navbar-btn:active {
+  background-color: #eaf0e7	;
 }
 
 .button.download-btn{
@@ -29,5 +29,12 @@
   margin-left: 90px;
   margin-bottom: 80px;
   border-radius: 50px;
+}
+
+.button.download-btn:hover {
+  background-color: #5b7c61;
+}
+.button.download-btn:active {
+  background-color: #445d49; 
 }
 

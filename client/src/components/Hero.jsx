@@ -1,4 +1,3 @@
-import Navbar from "./Navbar";
 import "../styles/Hero.css"
 import Button from "./Button";
 import Image from "./Image";
@@ -7,9 +6,7 @@ import { FaLinkedin } from "react-icons/fa6";
 
 const Hero = () => {
   return (
-    <div className="hero">
-    
-    <Navbar />
+    <div className="hero" id="hero-section">
     <Image variant={"hero-image"} imageKey={"imageMarc"}></Image>
     <h1>Hello! I am <br/>
       <span id="my-name">Marc Lawrence</span>, <br/>

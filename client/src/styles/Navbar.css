@@ -1,23 +1,28 @@
 .navbar {
   position: sticky;
-  height: 135px;
   top: 0;
+  height: 100px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: #729b79;
   color: white;
   padding-right: 2%;
+  z-index: 2;
 }
 
 .navbar-brand {
   position: absolute;
-  top: 10px;
+  top: 0px;
   left:10px;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 50px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 20px;
   color: #2e2c2f;
+   
+}
+
+.blur {
+  background-color: #729b79;
 }
 

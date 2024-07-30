@@ -1,0 +1,11 @@
+.about-me-card {
+  border: 1px solid black;
+  height: 160px;
+  margin-left: 100px;
+  margin-right: 100px;
+  display: flex;
+  margin-top: 50px;
+  border-radius: 25px;
+  background-color: #bacdb0;
+}
+

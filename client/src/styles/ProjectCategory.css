@@ -1,0 +1,15 @@
+.project-category{
+  border: 2px solid black;
+  border-radius: 20%;
+  display: inline-block;
+  padding: 8px;
+  background-color: #475b63;
+  margin: 5px;
+  
+}
+.p-category-txt {
+  margin: 0;
+  color: #f3e8ee;
+  font-family:'Arial Narrow', Arial, sans-serif;
+  font-weight:initial;
+}

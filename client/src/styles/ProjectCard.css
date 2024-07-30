@@ -1,0 +1,29 @@
+.project-card {
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: #a7b99e;
+  position: relative;
+  overflow: hidden; /* Hide overflow */
+  display: grid;
+  grid-template-columns: 179px 179px; /* Define two columns */
+  grid-template-rows: 239px;
+  height: 239px;
+  width: 100%;
+  gap: 20px; /* Optional: Add some space between columns */
+  padding: 0;
+}
+
+.project-name {
+  font-family:'Franklin Gothic Medium';
+  color: #2e2c2f;
+  font-size: larger;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  
+}
+
+.project-categories-container {
+  position: relative;
+  color: #2e2c2f;
+}
+

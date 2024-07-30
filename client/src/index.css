@@ -1,12 +1,11 @@
 /* Set root width */
 html {
   width: 100%; /* 100% of the viewport width */
-  overflow-x: hidden; /* This prevents horizontal overflow */
+  background-color: #bacdb0;
 }
 
 body {
   width: 100%; /* 100% of the root width */
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
-  overflow-x: hidden; /* This prevents horizontal overflow */
 }

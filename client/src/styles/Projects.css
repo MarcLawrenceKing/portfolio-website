@@ -1,4 +1,4 @@
-.about-me{
+.projects{
   background-color: #f3e8ee;
   margin: 0;
   height: 851.54px;
@@ -14,19 +14,16 @@
   color: #2e2c2f;
 }
 
-.about-me-cards-container {
+.projects-card-container {
   position: relative;
-  top: 100px;
-}
-
-.abt-me-desc {
-  position: absolute;
-  width: 100%;
-  top: 10px;
-  left: 130px;
-  color: #2e2c2f;
-  font-family:'Franklin Gothic Medium';
-  color: #2e2c2f;
-  font-size: medium;
-  margin-top: 30px;  
+  top: 14%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+  margin-left: 90px;
+  margin-right: 90px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  
 }
