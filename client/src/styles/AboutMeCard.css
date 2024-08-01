@@ -1,11 +1,31 @@
 .about-me-card {
   border: 1px solid black;
-  height: 160px;
-  margin-left: 100px;
-  margin-right: 100px;
-  display: flex;
-  margin-top: 50px;
-  border-radius: 25px;
-  background-color: #bacdb0;
+  border-radius: 20px;
+  background-color: #a7b99e;
+  position: relative;
+  overflow: hidden; /* Hide overflow */
+  display: grid;
+  grid-template-rows: 15% 80%;
+  height: 500px;
+  width: 450px; /* Fixed width to match minmax constraint */
+  gap: 20px;
+  padding: 0;
 }
 
+.abt-me-card-title-container {
+  font-size: 45px;
+  line-height: 70px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #475b63;
+  text-align: center;
+}
+
+.abt-me-card-content-container{
+  font-size: 25px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #2e2c2f;
+  padding: 40px;
+  padding-top: 0px;
+  line-height: 40px;
+  text-align:justify;
+}

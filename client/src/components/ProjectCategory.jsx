@@ -1,9 +1,9 @@
 import "../styles/ProjectCategory.css"
 
-const ProjectCategory = () => {
+const ProjectCategory = ({category}) => {
   return (
     <div className="project-category">
-      <p className="p-category-txt"> category</p>
+      <p className="p-category-txt"> {category}</p>
     </div>
   );
 };

@@ -38,3 +38,18 @@
   background-color: #445d49; 
 }
 
+.button.send-message-btn{
+  background-color: #729b79;
+  color: #f3e8ee;
+  width: 400px;
+  margin-top: 30px;
+  margin-left: 90px;
+  border-radius: 30px;
+}
+
+.button.send-message-btn:hover {
+  background-color: #5b7c61;
+}
+.button.send-message-btn:active {
+  background-color: #445d49; 
+}

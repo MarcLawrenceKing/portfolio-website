@@ -1,20 +1,28 @@
 import "../styles/SkillsCard.css"
-import { FaLinkedin } from "react-icons/fa6";
+import Image from "./Image";
+import PropTypes from 'prop-types';
 
-const SkillsCard = () => {
+const SkillsCard = ({skillImage, skillName, skillDescription}) => {
   return (
     <div className="skills-card">
-     <FaLinkedin size={"140px"} color={"#2e2c2f"}/>
-     <span className="skill-name">Skill Name</span> <br/>
+      <div className="skill-img-container">
+      <Image variant={"skill-image"} imageKey={skillImage}></Image> 
+      </div>
+     <div className="skill-desc-container">
+     <span className="skill-name">{skillName}</span> <br/>
      <ul className="skill-description">
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-      <li>Item 4</li>
-      <li>Item 5</li>
+      {skillDescription.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
       </ul>
+     </div>
+     
     </div>
   );
+};
+
+SkillsCard.propTypes = {
+  skillDescription: PropTypes.array.isRequired,
 };
 
 export default SkillsCard;

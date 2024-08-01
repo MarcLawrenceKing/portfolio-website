@@ -1,9 +1,11 @@
 import "../styles/AboutMeCard.css"
 
-const AboutMeCard = ({children}) => {
+const AboutMeCard = ({title, children}) => {
   return (
     <div className="about-me-card">
-      {children}
+      <div className="abt-me-card-title-container">{title}</div>
+      <div className="abt-me-card-content-container">{children}</div>
+      
     </div>
   );
 };

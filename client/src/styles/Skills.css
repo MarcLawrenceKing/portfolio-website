@@ -17,12 +17,11 @@
 .skills-cards-container {
   position: relative;
   top: 14%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 40px;
-  margin-top: 40px;
-  margin-left: 90px;
-  margin-right: 90px;
-  margin-bottom: 20px;
+  margin: 40px 90px 20px 90px;
+  border: 1px solid black;
 
 }

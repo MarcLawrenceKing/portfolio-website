@@ -17,13 +17,10 @@
 .projects-card-container {
   position: relative;
   top: 14%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  display: flex;
+  justify-content: center; /* Center the cards horizontally */
+  flex-wrap: wrap; /* Allow the cards to wrap to the next line */
   gap: 40px;
-  margin-top: 40px;
-  margin-left: 90px;
-  margin-right: 90px;
-  margin-bottom: 20px;
+  margin: 40px 90px 20px 90px;
   border: 1px solid black;
-  
 }
