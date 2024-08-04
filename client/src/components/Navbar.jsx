@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../styles/Navbar.css"
 import Button from "./Button";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
 
@@ -20,11 +21,26 @@ const Navbar = () => {
     };
   }, []);
 
+  const [menuOpen, setMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
   
   return (
     <div className="navbar">
     <p className="navbar-brand">My Portfolio</p>
+    <div className="hamburger-toggle-div">
+    <Button onClick={toggleMenu} variant={"hamburger-navbar"}> <GiHamburgerMenu /></Button>
+    {menuOpen && (
+        <div className="hamburger-toggle-content">
+          <a href="#hero-section">Home</a>
+          <a href="#about-me-section">About Me</a>
+          <a href="#skills-section">Skills</a>
+          <a href="#projects-section">Projects</a>
+          </div>
+      )}
+    </div>   
     <a href="#hero-section"><Button variant={"navbar-btn"}>Home</Button></a>
     <a href="#about-me-section"><Button variant={"navbar-btn"}>About Me</Button></a>
     <a href="#skills-section"><Button variant={"navbar-btn"}>Skills</Button></a>

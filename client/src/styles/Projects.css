@@ -1,15 +1,15 @@
-.projects{
+.projects {
   background-color: #f3e8ee;
   margin: 0;
   height: 851.54px;
 }
-.page-title {
+.skills .page-title {
   position: relative;
   top: 120px;
   text-align: center;
   font-weight: bold;
   font-size: 50px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin: 0;
   color: #2e2c2f;
 }

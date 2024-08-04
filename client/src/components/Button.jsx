@@ -1,10 +1,13 @@
 import "../styles/Button.css";
 
-const Button = ({variant,children}) =>{
+const Button = ({ variant, children, onClick }) => {
   return (
-  <>  
-  <button className={`button ${variant}`}>{children}</button>
-  </>);
+    <>
+      <button className={`button ${variant}`} onClick={onClick}>
+        {children}
+      </button>
+    </>
+  );
 };
 
 export default Button;

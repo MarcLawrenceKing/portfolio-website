@@ -13,16 +13,51 @@
 .navbar-brand {
   position: absolute;
   top: 0px;
-  left:10px;
+  left: 10px;
   font-weight: bold;
   font-size: 50px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin: 20px;
   color: #2e2c2f;
-   
 }
 
 .blur {
   background-color: #729b79;
 }
 
+.hamburger-toggle-div {
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-toggle-div a {
+  display: block;
+  color: #475b63;
+  text-decoration: none;
+  padding: 20px 15px;
+  border: 1px solid black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 25px;
+}
+
+.hamburger-toggle-div .hamburger-toggle-content {
+  position: absolute;
+  background-color: #c1d2b8;
+  min-width: 150px;
+  box-shadow: 2px 2px 5px #4a5246;
+  right: 20%;
+}
+
+.hamburger-toggle-div:hover .hamburger-toggle-content {
+  display: block;
+}
+
+.hamburger-toggle-div a:hover {
+  background-color: beige;
+}
+
+@media (min-width: 1000px) {
+  .hamburger-toggle-div a {
+    display: none;
+  }
+}

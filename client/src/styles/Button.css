@@ -1,28 +1,35 @@
-.button{
+.button {
   margin: 10px;
   padding: 15px;
   border: 1.5px solid black;
   border-radius: 15px;
   font-size: 25px;
   font-weight: bold;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   height: 65px;
   width: 140px;
 }
 
-.button.navbar-btn{
+.navbar-btn,
+.hamburger-navbar {
   background-color: #c1d2b8;
   color: #475b63;
 }
 
-.button.navbar-btn:hover {
-  background-color: #d6e1d0;
-}
-.button.navbar-btn:active {
-  background-color: #eaf0e7	;
+.hamburger-navbar {
+  display: none;
 }
 
-.button.download-btn{
+.navbar-btn:hover,
+.hamburger-navbar:hover {
+  background-color: #d6e1d0;
+}
+.navbar-btn:active,
+.hamburger-navbar:active {
+  background-color: #eaf0e7;
+}
+
+.download-btn {
   background-color: #729b79;
   color: #f3e8ee;
   width: 690px;
@@ -31,14 +38,7 @@
   border-radius: 50px;
 }
 
-.button.download-btn:hover {
-  background-color: #5b7c61;
-}
-.button.download-btn:active {
-  background-color: #445d49; 
-}
-
-.button.send-message-btn{
+.send-message-btn {
   background-color: #729b79;
   color: #f3e8ee;
   width: 400px;
@@ -47,9 +47,23 @@
   border-radius: 30px;
 }
 
-.button.send-message-btn:hover {
+.download-btn:hover,
+.send-message-btn:hover {
   background-color: #5b7c61;
 }
-.button.send-message-btn:active {
-  background-color: #445d49; 
+.download-btn:active,
+.send-message-btn:active {
+  background-color: #445d49;
+}
+
+@media (max-width: 1000px) {
+  .navbar-btn {
+    display: none;
+  }
+  .hamburger-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+  }
 }

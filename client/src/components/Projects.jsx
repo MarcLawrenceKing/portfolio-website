@@ -12,8 +12,12 @@ const Projects = () => {
 
       <div className="projects-card-container">
       <ProjectCard projectImage={"imageMarc"} projectName={"Centralized Enrollment Database (CED)"} projectCategories={CEDCategories}/>
-      <ProjectCard projectImage={"portfolioProject"} projectName={"My Portfolio (Design)"} projectCategories={myPortfolioCategories}/>
-      </div>      
+      <ProjectCard projectImage={"portfolioProject"} projectName={"Web Portfolio (Design)"} projectCategories={myPortfolioCategories}/>
+      <ProjectCard projectImage={"portfolioProject"} projectName={"Web Portfolio (Design)"} projectCategories={myPortfolioCategories}/>
+      <ProjectCard projectImage={"portfolioProject"} projectName={"Web Portfolio (Design)"} projectCategories={myPortfolioCategories}/>
+      <ProjectCard projectImage={"portfolioProject"} projectName={"Web Portfolio (Design)"} projectCategories={myPortfolioCategories}/>
+      <ProjectCard projectImage={"portfolioProject"} projectName={"Web Portfolio (Design)"} projectCategories={myPortfolioCategories}/>
+      </div>   
     </div>
   );
 };

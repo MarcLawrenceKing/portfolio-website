@@ -1,27 +1,35 @@
-.about-me{
+.about-me {
   background-color: #f3e8ee;
   margin: 0;
-  height: 851.54px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center;
 }
-.page-title {
+
+.about-me .page-title-container {
+  border: 1px solid black;
   position: relative;
-  top: 120px;
+  margin-top: 120px;
+  padding: 0px;
+}
+.about-me .page-title {
   text-align: center;
   font-weight: bold;
   font-size: 50px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #2e2c2f;
+  margin: 0px;
 }
 
 .about-me-cards-container {
   position: relative;
-  top: 14%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 50px;
-  margin: 40px 90px 20px 90px;
+  margin: 40px 90px 120px 90px;
   border: 1px solid black;
 }
 
@@ -31,8 +39,8 @@
   top: 10px;
   left: 130px;
   color: #2e2c2f;
-  font-family:'Franklin Gothic Medium';
+  font-family: "Franklin Gothic Medium";
   color: #2e2c2f;
   font-size: medium;
-  margin-top: 30px;  
+  margin-top: 30px;
 }
