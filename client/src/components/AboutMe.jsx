@@ -9,10 +9,11 @@ const AboutMe = () => {
       </div>
 
       <div className="about-me-cards-container">
-        <AboutMeCard title={"About Me"}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa tempora
-          laudantium velit inventore quasi autem in? Beatae delectus minima
-          incidunt in nam labore velit, iusto officia eos commodi soluta repe
+        <AboutMeCard title={"Introduction"}>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
+          quisquam labore mollitia dignissimos accusamus assumenda quibusdam
+          fugit non! Dignissimos itaque enim quae voluptatibus deserunt
+          accusamus consequuntur dolores distinctio vitae inventore.
         </AboutMeCard>
         <AboutMeCard title={"Education"}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa tempora
