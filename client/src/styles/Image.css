@@ -1,45 +1,21 @@
-.img.hero-image{
+.img.hero-image {
   height: 660px; /* Maintains the aspect ratio */
   border-radius: 350px;
-} 
-
-.project-image-container {
-  display: flex;
-  height: 239px; /* Adjust as needed */
-  width: 184px; /* Adjust as needed */
-  justify-content: center;
-  align-items: center;
-  background-color:#b94986 ;
-  border-radius: 20px;
-  border: 1px solid black;
 }
 
-.img.project-image{
-  height: 90%;
-  width: 90%;
-  margin-top: 5%;
+.img.project-image {
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
-  object-fit:cover;
+  object-fit: cover;
 }
 
-.skill-img-container {
-  display: flex;
-  height: 239px; /* Adjust as needed */
-  width: 184px; /* Adjust as needed */
-  justify-content: center;
-  align-items: center;
-  background-color:#b94986 ;
-  border-radius: 20px;
-  border: 1px solid black;
-}
 .img.skill-image {
   height: 69%;
   width: 95%;
   border-radius: 10px;
-  object-fit:cover;
+  object-fit: cover;
   margin-top: 20%;
   margin-left: 2.5%;
   margin-right: 2.5%;
 }
-
-

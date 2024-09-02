@@ -25,8 +25,8 @@ const Skills = () => {
   ];
   return (
     <div className="skills" id="skills-section">
-      <div className="page-title-container">
-        <p className="page-title">Skills</p>
+      <div className="skills-page-title-container">
+        <p className="skills-page-title">Skills</p>
       </div>
 
       <div className="skills-cards-container">

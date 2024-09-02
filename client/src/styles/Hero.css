@@ -1,7 +1,6 @@
 .hero {
   margin: 0;
   background-color: #bacdb0;
-  height: 100%;
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 10px;
@@ -22,7 +21,7 @@
 }
 
 h1 {
-  padding-top: 12%;
+  padding-top: 8%;
   margin-left: 90px;
   margin-top: 0px;
   font-size: 60px;

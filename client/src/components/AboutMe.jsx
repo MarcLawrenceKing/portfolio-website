@@ -4,8 +4,8 @@ import AboutMeCard from "./AboutMeCard";
 const AboutMe = () => {
   return (
     <div className="about-me" id="about-me-section">
-      <div className="page-title-container">
-        <p className="page-title">About Me</p>
+      <div className="about-me-page-title-container">
+        <p className="about-me-page-title">About Me</p>
       </div>
 
       <div className="about-me-cards-container">

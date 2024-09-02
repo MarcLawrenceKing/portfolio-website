@@ -1,33 +1,26 @@
 .skills-card {
+  flex-basis: calc(33% - 60px);
+  aspect-ratio: 16 / 9;
   border: 1px solid black;
   border-radius: 20px;
-  background-color: #CAD5C5;
-  position: relative;
-  padding: 1px;
-  overflow: hidden; /* Hide overflow */
+  background-color: #cad5c5;
   display: grid;
-  grid-template-columns: 179px 258px;
-  grid-template-rows: 239px;
-  height: 239px;
-  width: 458px; /* Fixed width to match minmax constraint */
-  gap: 20px;
-  padding: 0;
+  grid-template-columns: 40% 60%;
 }
 
 .skill-img-container {
-  text-align: center; /* Center horizontally */
+  border-radius: 20px;
+  border: 1px solid black;
   display: table-cell;
-  vertical-align: middle; /* Center vertically */
-  height: 100%; /* Or a specific height */
-  width: 100%; /* Or a specific width */
-  background-color: #CAD5C5;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+  background-color: #cad5c5;
 }
 
 .skill-description {
-  width: 100%;
   color: #2e2c2f;
-  font-family:'Franklin Gothic Medium';
-  color: #2e2c2f;
+  font-family: "Franklin Gothic Medium";
   font-size: 20px;
   line-height: 150%;
 }
@@ -35,8 +28,80 @@
 .skill-name {
   position: relative;
   top: 5%;
-  color: #2e2c2f;
-  font-family:'Franklin Gothic Medium';
+  left: 5%;
+  font-family: "Franklin Gothic Medium";
   color: #475b63;
   font-size: 35px;
+}
+
+@media (max-width: 1540px) {
+  .skill-description {
+    font-size: 19px;
+  }
+  .skill-name {
+    font-size: 33px;
+  }
+}
+
+@media (max-width: 1420px) {
+  .skill-description {
+    font-size: 17px;
+  }
+  .skill-name {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1270px) {
+  .skills-card {
+    flex-basis: calc(39% - 10.67px);
+  }
+  .skill-description {
+    font-size: 20px;
+  }
+  .skill-name {
+    font-size: 33px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .skills-card {
+    flex-basis: calc(39% - 10.67px);
+  }
+  .skill-description {
+    font-size: 18px;
+  }
+  .skill-name {
+    font-size: 31px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .skills-card {
+    flex-basis: calc(41% - 10px);
+  }
+
+  .skill-name {
+    font-size: 29px;
+  }
+}
+
+@media (max-width: 940px) {
+  .skills-card {
+    flex-basis: calc(46% - 10px);
+  }
+
+  .skill-name {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 850px) {
+  .skills-card {
+    flex-basis: calc(47% - 10px);
+  }
+
+  .skill-name {
+    font-size: 25px;
+  }
 }

@@ -1,26 +1,89 @@
 .projects {
   background-color: #f3e8ee;
-  margin: 0;
-  height: 851.54px;
+  display: grid;
+  grid-template-rows: 10% 90%;
+  gap: 5px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  min-width: 0;
+  min-height: 0;
 }
-.skills .page-title {
-  position: relative;
-  top: 120px;
+.projects-page-title-container {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+}
+.projects-page-title {
   text-align: center;
   font-weight: bold;
-  font-size: 50px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin: 0;
   color: #2e2c2f;
+  font-size: 60px;
+  margin: 0px;
 }
 
 .projects-card-container {
-  position: relative;
-  top: 14%;
   display: flex;
-  justify-content: center; /* Center the cards horizontally */
-  flex-wrap: wrap; /* Allow the cards to wrap to the next line */
-  gap: 40px;
-  margin: 40px 90px 20px 90px;
-  border: 1px solid black;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 16px;
+  min-width: 0;
+  min-height: 0;
+}
+
+@media (max-width: 1615px) {
+  .projects-page-title {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 1480px) {
+  .projects-page-title {
+    transform: scale(0.85);
+  }
+}
+
+@media (max-width: 1350px) {
+  .projects-page-title {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 1300px) {
+  .projects-page-title {
+    transform: scale(0.75);
+  }
+}
+
+@media (max-width: 1200px) {
+  .projects-page-title {
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 1150px) {
+  .projects-page-title {
+    transform: scale(0.65);
+  }
+}
+
+@media (max-width: 1040px) {
+  .projects-page-title {
+    transform: scale(0.6);
+  }
+}
+
+@media (max-width: 960px) {
+  .projects-page-title {
+    transform: scale(0.55);
+  }
+}
+
+@media (max-width: 910px) {
+  .projects-page-title {
+    transform: scale(0.5);
+  }
 }

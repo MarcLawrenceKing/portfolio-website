@@ -1,37 +1,97 @@
 .project-card {
+  flex-basis: calc(33% - 60px);
+  aspect-ratio: 16 / 9;
   border: 1px solid black;
   border-radius: 20px;
   background-color: #a7b99e;
-  position: relative;
-  overflow: hidden; /* Hide overflow */
   display: grid;
-  grid-template-columns: 179px 258px; /* Define two columns */
-  grid-template-rows: 239px;
-  height: 239px;
-  max-width: 458px; 
-  gap: 20px; /* Optional: Add some space between columns */
-  padding: 0;
+  grid-template-columns: 40% 60%;
 }
 
 .project-image-container {
-  text-align: center; /* Center horizontally */
+  border-radius: 20px;
+  border: 1px solid black;
   display: table-cell;
-  vertical-align: middle; /* Center vertically */
-  height: 100%; /* Or a specific height */
-  width: 100%; /* Or a specific width */
-  background-color: #CAD5C5;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+  background-color: #cad5c5;
+  overflow: hidden;
 }
 
 .project-name {
-  font-family:'Franklin Gothic Medium';
+  position: relative;
+  top: 5%;
+  font-family: "Franklin Gothic Medium";
   color: #475b63;
-  font-size: 30px;
-  margin-top: 10px;
+  font-size: 35px;
+  margin-top: 0px;
   margin-bottom: 0px;
-  
 }
 
 .project-categories-container {
   position: relative;
+  margin-left: 5%;
 }
 
+@media (max-width: 1540px) {
+  .project-name {
+    font-size: 33px;
+  }
+}
+
+@media (max-width: 1420px) {
+  .project-name {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1270px) {
+  .project-card {
+    flex-basis: calc(39% - 10.67px);
+  }
+
+  .project-name {
+    font-size: 33px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .project-card {
+    flex-basis: calc(39% - 10.67px);
+  }
+
+  .project-name {
+    font-size: 31px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .project-card {
+    flex-basis: calc(41% - 10px);
+  }
+
+  .project-name {
+    font-size: 29px;
+  }
+}
+
+@media (max-width: 940px) {
+  .project-card {
+    flex-basis: calc(45% - 10px);
+  }
+
+  .project-name {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 850px) {
+  .project-card {
+    flex-basis: calc(47% - 10px);
+  }
+
+  .project-name {
+    font-size: 25px;
+  }
+}
