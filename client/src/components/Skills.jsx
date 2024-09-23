@@ -13,9 +13,8 @@ const Skills = () => {
   const javaSkills = [
     "Java OOP",
     "JFrame Form (GUI)",
-    "JDBC (MySQL)",
+    "JDBC",
     "Collection Frameworks",
-    "MVC Framework",
   ];
   const mysqlSkills = ["SQL Join", "SQL Functions"];
   const figmaSkills = [
