@@ -2,26 +2,17 @@ import "../styles/Skills.css";
 import SkillsCard from "./SkillsCard";
 
 const Skills = () => {
-  const reactSkills = ["React JSX", "React useState", "React useEffect"];
-  const cssSkills = [
-    "CSS Positions",
-    "CSS Pseudoclasses",
-    "CSS Display",
-    "CSS Responsiveness",
-  ];
-  const jsSkills = ["JS Functions", "JS Objects", "JS DOM", "JS Modules"];
+  const reactSkills = ["JSX", "useState", "useEffect", "Router"];
+  const cssSkills = ["Pseudoclasses", "Responsiveness"];
+  const jsSkills = ["Functions", "Objects", "DOM", "Modules"];
   const javaSkills = [
-    "Java OOP",
+    "OOP",
     "JFrame Form (GUI)",
     "JDBC",
     "Collection Frameworks",
   ];
-  const mysqlSkills = ["SQL Join", "SQL Functions"];
-  const figmaSkills = [
-    "Figma Components",
-    "Figma Constraints",
-    "Figma Prototype",
-  ];
+  const mysqlSkills = ["Join", "CRUD"];
+  const figmaSkills = ["Components", "Constraints", "Prototype"];
   return (
     <div className="skills" id="skills-section">
       <div className="skills-page-title-container">

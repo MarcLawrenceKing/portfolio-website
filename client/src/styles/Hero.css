@@ -24,6 +24,7 @@ h1 {
   padding-top: 8%;
   margin-left: 90px;
   margin-top: 0px;
+  margin-bottom: 50px;
   font-size: 60px;
   color: #475b63;
   width: 800px;
@@ -43,6 +44,7 @@ h1 {
 h2 {
   margin-left: 90px;
   margin-top: 10px;
+  margin-bottom: 70px;
   font-size: 25px;
   color: #2e2c2f;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;

@@ -2,14 +2,16 @@
   border: 1px solid black;
   border-radius: 20px;
   background-color: #a7b99e;
-  flex: 1;
   margin: 2%;
   padding: 20px;
   text-align: center;
-  height: 520px;
   width: 480px;
   min-width: 0;
   min-height: 0;
+}
+
+.about-me-card p {
+  margin-top: 5%;
 }
 
 .abt-me-card-title-container {
@@ -23,7 +25,7 @@
 
 .abt-me-card-content-container {
   line-height: 40px;
-  text-align: justify;
+  text-align: center;
   padding: 5%;
   color: #2e2c2f;
   font-family: "Franklin Gothic";
@@ -44,9 +46,6 @@
     transform: scale(0.85);
     padding: 0px;
   }
-  .about-me-card {
-    height: 440px;
-  }
 }
 @media (max-width: 1350px) {
   .abt-me-card-title-container,
@@ -61,9 +60,6 @@
     transform: scale(0.75);
     margin-left: -10%;
     margin-right: -10%;
-  }
-  .about-me-card {
-    height: 350px;
   }
 }
 
@@ -81,8 +77,9 @@
     margin-left: -20%;
     margin-right: -20%;
   }
-  .about-me-card {
-    height: 310px;
+
+  .about-me-card p {
+    margin-top: 0px;
   }
 }
 
@@ -99,9 +96,6 @@
   .abt-me-card-title-container,
   .abt-me-card-content-container {
     transform: scale(0.55);
-  }
-  .about-me-card {
-    height: 260px;
   }
 }
 

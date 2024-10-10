@@ -10,7 +10,9 @@ const Footer = () => {
         <p className="footer-text" id="lets-talk">
           Let's talk
         </p>
-        <Button variant={"send-message-btn"}>Send a message</Button>
+        <a href="mailto:marclawrenceking@gmail.com" target="_blank">
+          <Button variant={"send-message-btn"}>Send a message</Button>
+        </a>
       </div>
 
       <div className="connect-with-me-container">
@@ -18,10 +20,21 @@ const Footer = () => {
           Connect with me!
         </p>
         <div className="footer-profile-section">
-          <FaFacebook size={"50px"} color={"#2e2c2f"} />
-          <FaLinkedin size={"55px"} color={"#2e2c2f"} />
-          <FaGithub size={"50px"} color={"#2e2c2f"} />
-          <FaGoogle size={"50px"} color={"#2e2c2f"} />
+          <a href="https://www.facebook.com/marclawrence.king" target="_blank">
+            <FaFacebook size={"50px"} color={"#2e2c2f"} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/marc-lawrence-king-0721a6261/"
+            target="_blank"
+          >
+            <FaLinkedin size={"55px"} color={"#2e2c2f"} />
+          </a>
+          <a href="https://github.com/MarcLawrenceKing" target="_blank">
+            <FaGithub size={"50px"} color={"#2e2c2f"} />
+          </a>
+          <a href="mailto:marclawrenceking@gmail.com" target="_blank">
+            <FaGoogle size={"50px"} color={"#2e2c2f"} />
+          </a>
         </div>
       </div>
     </div>

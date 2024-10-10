@@ -10,20 +10,26 @@ const AboutMe = () => {
 
       <div className="about-me-cards-container">
         <AboutMeCard title={"Introduction"}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
-          quisquam labore mollitia dignissimos accusamus assumenda quibusdam
-          fugit non! Dignissimos itaque enim quae voluptatibus deserunt
-          accusamus consequuntur dolores distinctio vitae inventore.
+          <p>
+            Hi, I'm Marc, a passionate Web Developer with a love for front-end
+            development.
+            <br /> <br /> I enjoy solving challenges and creating innovative
+            solutions.
+          </p>
         </AboutMeCard>
         <AboutMeCard title={"Education"}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa tempora
-          laudantium velit inventore quasi autem in? Beatae delectus minima
-          incidunt in nam labore velit, iusto officia eos commodi soluta repe
+          <p>
+            I am taking my Bachelor of Science in Information Technology from @
+            Polytechnic University of the Philippines - Manila. <br /> <br /> My
+            academic journey has equipped me with strong foundations in software
+            development, data science, and cybersecurity.
+          </p>
         </AboutMeCard>
         <AboutMeCard title={"Hobbies"}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa tempora
-          laudantium velit inventore quasi autem in? Beatae delectus minima
-          incidunt in nam labore velit, iusto officia eos commodi soluta repe
+          <p>
+            When I'm not working, I love playing chess and the guitar, which
+            keep me inspired and energized.
+          </p>
         </AboutMeCard>
       </div>
     </div>
