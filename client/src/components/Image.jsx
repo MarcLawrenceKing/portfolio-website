@@ -10,6 +10,7 @@ import figmaLogo from "../assets/figma-logo.png";
 import portfolioProject from "../assets/portfolio-project.png";
 import AWSCC30DProject from "../assets/AWS30DFE.png";
 import CEDv2 from "../assets/CEDv2.png";
+import mpklmdd from "../assets/mpklmdd.png";
 
 const images = {
   // hero image
@@ -26,6 +27,7 @@ const images = {
   AWSCC30DProject,
   CEDv2,
   phoenix,
+  mpklmdd,
 };
 const Image = ({ imageKey, variant }) => {
   const imageSrc = images[imageKey];

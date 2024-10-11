@@ -14,6 +14,8 @@ const ProjectCard = ({
     PortfolioWebsiteFigma:
       "https://www.figma.com/proto/wVJLGvW0hGT0zXyKcIwQtz/Untitled?node-id=30-202&node-type=frame&t=11eZHavkQMGipjJD-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=30%3A202",
     CEDv2: "https://marclawrenceking.github.io/CEDv2/",
+    mpklmdd:
+      "https://public.tableau.com/app/profile/marc.king4953/viz/Mapakalamidad/Dashboard1?publish=yes",
   };
 
   return (

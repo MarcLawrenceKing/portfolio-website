@@ -5,6 +5,7 @@ const Projects = () => {
   const AWSCC_30D = ["HTML", "CSS", "JavaScript"];
   const PWFigma = ["Figma", "Prototype"];
   const CEDv2 = ["ReactJS", "TailwindCSS", "under construction"];
+  const mpklmdd = ["Tableau", "Interactive Dashboard"];
 
   return (
     <div className="projects" id="projects-section">
@@ -25,6 +26,13 @@ const Projects = () => {
           projectName={"Portfolio Website"}
           projectCategories={PWFigma}
           projectLink={"PortfolioWebsiteFigma"}
+        />
+
+        <ProjectCard
+          projectImage={"mpklmdd"}
+          projectName={"Flood Report Visualization"}
+          projectCategories={mpklmdd}
+          projectLink={"mpklmdd"}
         />
         <ProjectCard
           projectImage={"CEDv2"}
