@@ -1,4 +1,4 @@
-.navbar {
+/* .navbar {
   position: sticky;
   top: 0;
   height: 100px;
@@ -14,7 +14,7 @@
   left: 10px;
   font-weight: bold;
   font-size: 50px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
   margin: 0px;
   margin-top: 1.2%;
   margin-left: 1%;
@@ -74,38 +74,4 @@
 
 .hamburger-toggle-div a:hover {
   background-color: beige;
-}
-@media (min-width: 1000px) {
-  .hamburger-toggle-content a {
-    display: none;
-  }
-}
-
-@media (max-width: 1000px) {
-  .nav-btn-section {
-    display: none;
-  }
-}
-
-@media (max-width: 1600px) {
-  .navbar {
-    height: 90px;
-  }
-  .nav-btn-section a,
-  .navbar-brand {
-    transform: scale(0.9);
-    transform-origin: top left;
-  }
-}
-
-@media (max-width: 1480px) {
-  .navbar {
-    height: 85px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .navbar-brand {
-    margin-top: 2%;
-  }
-}
+} */

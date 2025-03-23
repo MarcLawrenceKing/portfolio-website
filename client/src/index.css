@@ -1,11 +1,26 @@
-/* Set root width */
-html {
-  width: 100%; /* 100% of the viewport width */
-  background-color: #bacdb0;
+@import "tailwindcss";
+
+@theme {
+  --color-primary: oklch(52.2% 0.1074 160.34);
+  --color-secondary: oklch(83.14% 0.1333 158.38);
+  --color-accent1: oklch(93.92% 0.0648 128.43);
+  --color-accent2: oklch(38.88% 0.0833 151.44);
+  --color-accent3: oklch(80.91% 0.1431 122.13);
+
+  --color-white: oklch(100% 0 0);
+  --collor-black: oklch(12.24% 0.0184 20.07);
+
+  --breakpoint-todo3: 59.375rem;
+  --breakpoint-xs: 30rem;
+  --breakpoint-s: 40rem;
+  --breakpoint-md: 47rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 96rem;
+  --breakpoint-3xl: 120rem;
 }
 
 body {
-  width: 100%; /* 100% of the root width */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  @apply font-sans;
+  background: oklch(96.13% 0.0211 56.13);
 }
