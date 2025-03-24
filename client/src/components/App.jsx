@@ -1,4 +1,3 @@
-import "../styles/App.css";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import AboutMe from "./AboutMe";
