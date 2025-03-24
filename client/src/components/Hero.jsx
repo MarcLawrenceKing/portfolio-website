@@ -1,4 +1,3 @@
-import "../styles/Hero.css";
 import Button from "./Button";
 import HeaderPicture from "./HeaderPicture";
 import Image from "./Image";
