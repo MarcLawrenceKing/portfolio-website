@@ -1,6 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 @import "tailwindcss";
 
 @theme {
+  --font-jakarta: "Plus Jakarta Sans", "sans-serif";
+
+  --text-tiny: 0.75rem;
+  --text-navlist: 0.875rem;
+  --text-btn: 1rem;
+
+  /* --text-hero1: 2.25rem; */
+
   --color-primary: oklch(52.2% 0.1074 160.34);
   --color-secondary: oklch(83.14% 0.1333 158.38);
   --color-accent1: oklch(93.92% 0.0648 128.43);
@@ -10,17 +19,162 @@
   --color-white: oklch(100% 0 0);
   --collor-black: oklch(12.24% 0.0184 20.07);
 
-  --breakpoint-todo3: 59.375rem;
-  --breakpoint-xs: 30rem;
+  /* --breakpoint-xs: 30rem;
   --breakpoint-s: 40rem;
   --breakpoint-md: 47rem;
   --breakpoint-lg: 64rem;
   --breakpoint-xl: 80rem;
   --breakpoint-2xl: 96rem;
-  --breakpoint-3xl: 120rem;
+  --breakpoint-3xl: 120rem; */
+}
+
+.hero-fields {
+  @apply rounded px-2 w-68 text-tiny font-semibold text-white bg-gradient-to-r from-accent2 via-primary to-accent3;
+}
+
+.text-hero2 {
+  @apply text-[1.375rem] text-center text-accent2 mt-6 sm:text-[1.563rem] md:text-[1.625rem] lg:text-[1.688rem] xl:text-[1.75rem] 2xl:text-start;
+}
+.text-hero1 {
+  @apply text-[2.25rem] text-center font-bold bg-gradient-to-r from-accent2 via-primary to-accent3 bg-clip-text text-transparent leading-11 sm:text-[2.875rem] sm:leading-13 md:text-[3.125rem] md:leading-15 lg:text-[3.625rem] lg:leading-17 xl:text-[4rem] xl:leading-21 2xl:text-start 2xl:w-120;
 }
 
 body {
-  @apply font-sans;
-  background: oklch(96.13% 0.0211 56.13);
+  @apply font-jakarta;
+  background: oklch(93.92% 0.0648 128.43);
+}
+
+.d-flex {
+  @apply flex;
+}
+.justify-content-center {
+  @apply justify-center;
+}
+.mt-5 {
+  @apply mt-12;
+}
+.mt-xxl-0 {
+  @apply mt-0;
+}
+
+.bg-gradient-primary-to-secondary {
+  background: oklch(52.2% 0.1074 160.34);
+  background: linear-gradient(
+    135deg,
+    oklch(52.2% 0.1074 160.34) 0%,
+    oklch(83.14% 0.1333 158.38) 100%
+  );
+}
+
+.profile {
+  @apply relative h-[75vw] w-[75vw] max-h-[40rem] max-w-screen-sm mt-[5vw] rounded-[5vw];
+}
+.profile .profile-img {
+  @apply h-[80vw] max-h-[45rem] absolute -translate-x-2/4 left-2/4 bottom-0;
+}
+.profile .dots-1 {
+  @apply absolute w-[3vw] right-[1.5vw] top-[4vw];
+}
+.profile .dots-1 svg {
+  @apply fill-[#def4c6];
+}
+.profile .dots-2 {
+  @apply absolute w-[3vw] right-[-4vw] top-[6.05vw];
+}
+.profile .dots-2 svg {
+  @apply fill-[#1b512d];
+}
+.profile .dots-3 {
+  @apply absolute w-[3vw] left-[1.5vw] bottom-[6.05vw];
+}
+.profile .dots-3 svg {
+  @apply fill-[#def4c6];
+}
+.profile .dots-4 {
+  @apply absolute w-[3vw] left-[-4vw] bottom-[4vw];
+}
+.profile .dots-4 svg {
+  @apply fill-[#1b512d];
+}
+
+@media (min-width: 576px) {
+  .profile {
+    @apply h-[60vw] w-[60vw];
+  }
+  .profile .profile-img {
+    @apply h-[65vw];
+  }
+  .profile .dots-1 {
+    @apply w-[3vw] right-[1.5vw];
+  }
+  .profile .dots-2 {
+    @apply w-[3vw] right-[-4vw];
+  }
+  .profile .dots-3 {
+    @apply w-[3vw] left-[1.5vw];
+  }
+  .profile .dots-4 {
+    @apply w-[3vw] left-[-4vw];
+  }
+}
+@media (min-width: 768px) {
+  .profile {
+    @apply h-[50vw] w-[50vw];
+  }
+  .profile .profile-img {
+    @apply h-[55vw];
+  }
+  .profile .dots-1 {
+    @apply w-[3vw] right-[1.5vw];
+  }
+  .profile .dots-2 {
+    @apply w-[3vw] right-[-4vw];
+  }
+  .profile .dots-3 {
+    @apply w-[3vw] left-[1.5vw];
+  }
+  .profile .dots-4 {
+    @apply w-[3vw] left-[-4vw];
+  }
+}
+@media (min-width: 992px) {
+  .profile {
+    @apply h-[40vw] w-[40vw];
+  }
+  .profile .profile-img {
+    @apply h-[45vw];
+  }
+  .profile .dots-1 {
+    @apply w-[1.5vw] right-[0.75vw];
+  }
+  .profile .dots-2 {
+    @apply w-[1.5vw] right-[-2vw];
+  }
+  .profile .dots-3 {
+    @apply w-[1.5vw] left-[0.75vw];
+  }
+  .profile .dots-4 {
+    @apply w-[1.5vw] left-[-2vw];
+  }
+}
+
+@media (min-width: 1200px) {
+  .profile {
+    @apply h-[35vw] w-[35vw];
+  }
+  .profile .profile-img {
+    @apply h-[40vw];
+  }
+  .profile .dots-1 {
+    @apply w-[1.5vw] right-[0.75vw];
+  }
+  .profile .dots-2 {
+    @apply w-[1.5vw] right-[-2vw];
+  }
+  .profile .dots-3 {
+    @apply w-[1.5vw] left-[0.75vw];
+  }
+  .profile .dots-4 {
+    @apply w-[1.5vw] left-[-2vw];
+  }
 }
