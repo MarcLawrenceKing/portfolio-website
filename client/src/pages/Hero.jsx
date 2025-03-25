@@ -1,6 +1,6 @@
-import Button from "./Button";
-import HeaderPicture from "./HeaderPicture";
-import Image from "./Image";
+import Button from "../components/Button";
+import HeaderPicture from "../components/HeaderPicture";
+import Image from "../components/Image";
 import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 

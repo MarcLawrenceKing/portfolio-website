@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
-import Hero from "./Hero";
-import AboutMe from "./AboutMe";
+import Hero from "../pages/Hero";
+import AboutMe from "../pages/AboutMe";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Footer from "./Footer";
@@ -10,8 +10,8 @@ function App() {
     <div className="">
       <Navbar />
       <Hero />
-      {/* 
       <AboutMe />
+      {/* 
       <Skills />
       <Projects />
       <Footer /> */}
