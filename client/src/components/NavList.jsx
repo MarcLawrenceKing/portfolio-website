@@ -1,22 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavList = ({ className }) => {
   return (
     <div
       className={`grid font-bold text-center w-full text-accent2 text-navlist shadow-lg sm:border-none sm:shadow-none ${className}`}
     >
-      <a className="py-1" href="#hero-section">
+      <Link className="py-1" to="/portfolio-website/">
         Home
-      </a>
-      <a className="py-1" href="#resume-section">
+      </Link>
+      <Link className="py-1" to="/portfolio-website/resume">
         Resume
-      </a>
-      <a className="py-1" href="#projects-section">
+      </Link>
+      <Link className="py-1" to="/portfolio-website/projects">
         Projects
-      </a>
-      <a className="py-1" href="#contact-section">
+      </Link>
+      <Link className="py-1" to="/portfolio-website/contact">
         Contact
-      </a>
+      </Link>
     </div>
   );
 };

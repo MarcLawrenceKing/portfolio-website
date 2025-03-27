@@ -1,5 +1,4 @@
-import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
-import SocialsSVGSection from "../components/SocialsSVGSection";
+import SocialsSVGSection from "./SocialsSVGSection";
 
 const AboutMe = () => {
   return (

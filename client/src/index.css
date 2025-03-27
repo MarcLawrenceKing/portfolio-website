@@ -28,7 +28,7 @@ body {
 }
 
 .hero-fields {
-  @apply rounded px-2 w-68 text-tiny font-semibold text-white bg-gradient-to-r from-accent2 via-primary to-accent3;
+  @apply rounded px-2 w-58 text-tiny font-semibold text-white bg-gradient-to-r from-accent2 via-primary to-accent3;
 }
 
 .text-hero2 {
