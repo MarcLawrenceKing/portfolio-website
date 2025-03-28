@@ -55,6 +55,10 @@ body {
   @apply text-[1.625rem] font-bold sm:text-[1.688rem] md:text-[1.75rem] lg:text-[2rem];
 }
 
+.text-skills {
+  @apply text-[1.5rem] font-bold bg-gradient-to-r from-accent2 via-primary to-accent3 bg-clip-text text-transparent md:text-[1.563rem] lg:text-[1.688rem] xl:text-[1.75rem];
+}
+
 /*hero picuture styles*/
 .d-flex {
   @apply flex;

@@ -10,10 +10,19 @@ const Resume = () => {
   const skills = [
     "Web Development",
     "Data Science",
-    "Cherry",
     "Data Science",
     "Data Science",
     "Data Science",
+    "Data Science",
+  ];
+
+  const languages = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "Vite + React",
+    "Tailwind CSS",
   ];
   return (
     <div>
@@ -57,7 +66,7 @@ const Resume = () => {
             />
           </ResumeCard>
         </div>
-        <div className="flex items-center mb-5 mt-5 w-125  md:w-160 lg:w-180 xl:w-200">
+        <div className="flex items-center justify-center mb-5 mt-5 w-125 sm:justify-start md:w-160 lg:w-180 xl:w-200">
           <p className="text-resume-header text-accent2">Education</p>
         </div>
         <div className="flex flex-col gap-10">
@@ -71,10 +80,13 @@ const Resume = () => {
               description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, corrupti, maiores in mollitia distinctio eligendi ullam atque perferendis tempora quae temporibus quo voluptatem adipisci cum voluptatibus esse placeat libero eaque."
             />
           </ResumeCard>
-        </div>
-        <div>
-          <ResumeCard>
+          <ResumeCard className="flex gap-12 flex-col mt-14">
             <SkillsLanguages logo="hammer" name="Skills" items={skills} />
+            <SkillsLanguages
+              logo="code-xml"
+              name="Languages"
+              items={languages}
+            />
           </ResumeCard>
         </div>
       </div>
