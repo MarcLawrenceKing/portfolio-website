@@ -19,7 +19,8 @@
   --color-accent4: oklch(93.49% 0.0396 127.55);
 
   --color-white: oklch(100% 0 0);
-  --collor-black: oklch(12.24% 0.0184 20.07);
+  --color-black: oklch(12.24% 0.0184 20.07);
+  --color-gray: oklch(55.75% 0.0165 244.89);
 }
 
 body {
@@ -48,6 +49,10 @@ body {
 
 .text-aboutme-subtitle2 {
   @apply text-[1rem] text-center text-accent2 mt-2;
+}
+
+.text-resume-header {
+  @apply text-[1.625rem] font-bold sm:text-[1.688rem] md:text-[1.75rem] lg:text-[2rem];
 }
 
 /*hero picuture styles*/

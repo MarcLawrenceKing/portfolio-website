@@ -12,7 +12,8 @@ const Button = ({
 
   const variantStyles = {
     toggle: "sm:hidden ",
-    primary: "bg-primary text-white hover:bg-accent2 font-bold",
+    primary:
+      "flex gap-4 items-center bg-primary text-white hover:bg-accent2 font-bold ",
     secondary:
       "border-accent2 text-accent2 hover:bg-accent2 hover:text-white font-bold",
     danger: "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500",
