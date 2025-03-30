@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import ResumeCard from "../components/ResumeCard";
 import Education from "../components/Education";
 import SkillsLanguages from "../components/SkillsLanguages";
+import Footer from "../components/Footer";
 
 const Resume = () => {
   const skills = [
@@ -90,6 +91,7 @@ const Resume = () => {
           </ResumeCard>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

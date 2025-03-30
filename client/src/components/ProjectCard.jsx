@@ -1,37 +1,25 @@
-import "../styles/ProjectCard.css";
-import Image from "./Image";
-import ProjectCategory from "./ProjectCategory";
+import DefaultProject from "../assets/DefaultProject.jpg";
 
 const ProjectCard = ({
-  projectImage,
-  projectName,
-  projectCategories,
-  projectLink,
+  projectImage = DefaultProject,
+  projectName = "project name",
+  projectLink = "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  projectDesc = "project desc",
 }) => {
-  const variantClasses = {
-    AWSCCFE30D:
-      "https://marclawrenceking.github.io/AWSCC-PUP-Main-Frontend-Workshop/",
-    PortfolioWebsiteFigma:
-      "https://www.figma.com/proto/wVJLGvW0hGT0zXyKcIwQtz/Untitled?node-id=30-202&node-type=frame&t=11eZHavkQMGipjJD-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=30%3A202",
-    CEDv2: "https://marclawrenceking.github.io/CEDv2/",
-    mpklmdd:
-      "https://public.tableau.com/app/profile/marc.king4953/viz/Mapakalamidad/Dashboard1?publish=yes",
-  };
-
   return (
-    <div className="project-card">
-      <div className="project-image-container">
-        <a href={variantClasses[projectLink]} target="_blank">
-          <Image variant={"project-image"} imageKey={projectImage}></Image>
-        </a>
+    <a href={projectLink}>
+      <div className="flex flex-col-reverse mx-10 shadow-xl rounded-xl overflow-hidden bg-accent1 sm:w-120 md:w-150 lg:w-200 lg:flex-row">
+        <div className="flex flex-col p-12 justify-center gap-2 flex-4">
+          <p className="font-bold text-[2rem] text-center lg:text-start">
+            {projectName}
+          </p>
+          <p>{projectDesc}</p>
+        </div>
+        <div className="flex bg-secondary flex-3 justify-center">
+          <img src={projectImage} className="h-60 lg:h-100" />
+        </div>
       </div>
-      <div className="project-categories-container">
-        <p className="project-name"> {projectName}</p> <br />
-        {projectCategories.map((category, index) => (
-          <ProjectCategory key={index} category={category} />
-        ))}
-      </div>
-    </div>
+    </a>
   );
 };
 

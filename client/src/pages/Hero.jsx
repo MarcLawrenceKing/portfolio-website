@@ -2,6 +2,7 @@ import Button from "../components/Button";
 import HeaderPicture from "../components/HeaderPicture";
 import AboutMe from "../components/AboutMe";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Hero = () => {
   // const downloadPDF = () => {
@@ -34,6 +35,7 @@ const Hero = () => {
         </div>
       </div>
       <AboutMe />
+      <Footer />
     </div>
   );
 };
