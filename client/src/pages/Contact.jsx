@@ -1,44 +1,185 @@
+import { useState } from "react";
 import Button from "../components/Button";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { DynamicIcon } from "lucide-react/dynamic";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    fname: "",
+    email: "",
+    number: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({
+    fname: "",
+    email: "",
+    number: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+
+    // Clear error when user types
+    if (errors[name]) {
+      setErrors((prev) => ({
+        ...prev,
+        [name]: "",
+      }));
+    }
+  };
+
+  const validateForm = () => {
+    let valid = true;
+    const newErrors = { ...errors };
+
+    // Name validation; checks if input is empty
+    if (!formData.fname.trim()) {
+      newErrors.fname = "Full name is required!";
+      valid = false;
+    }
+
+    // Email validation; uses regex
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required!";
+      valid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email!";
+      valid = false;
+    }
+
+    // Phone number validation (optional)
+    if (formData.number && !/^[\d\s+\-()]{10,}$/.test(formData.number)) {
+      newErrors.number = "Please enter a valid phone number!";
+      valid = false;
+    }
+
+    // Message validation
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required!";
+      valid = false;
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = "Message should be at least 10 characters!";
+      valid = false;
+    }
+
+    setErrors(newErrors);
+    return valid;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      // Form is valid, proceed with submission
+      console.log("Form submitted:", formData);
+      // Here you would typically send the data to your backend
+      alert("Thank you for your message! We'll get back to you soon.");
+      setFormData({
+        fname: "",
+        email: "",
+        number: "",
+        message: "",
+      });
+    }
+  };
   return (
     <div>
       <Navbar />
-      <div className="flex justify-center items-center flex-col mt-30 mx-10 pb-12 sm:mx-20 md:mx-30 2xl:mx-12 2xl:flex-row 2xl:mt-15 bg-secondary">
-        <div className="flex flex-col">
-          <p> Get in touch</p>
-          <p> Let's work together</p>
-          <input
-            type="text"
-            id="fname"
-            name="fname"
-            placeholder="Full name"
-            className="border-2"
+      <div className="flex flex-col justify-center items-center py-30 bg-accent4 px-12 sm:px-28 ">
+        <div className="flex flex-col bg-accent1 w-full items-center p-10 sm:w-110 md:w-155 lg:w-215 xl:w-260">
+          <DynamicIcon
+            name={"mail"}
+            color="oklch(93.92% 0.0648 128.43)"
+            size={48}
+            className="p-2 rounded-lg bg-gradient-primary-to-secondary mb-2 "
           />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email address"
-            className="border-2"
-          />
-          <input
-            type="number"
-            id="number"
-            name="number"
-            placeholder="Phone number"
-            className="border-2"
-          />
-          <input
-            type="text"
-            id="message"
-            name="message"
-            placeholder="Message"
-            className="border-2 h-20"
-          />
-          <Button>Submit</Button>
+          <p className="text-center text-[1.75rem] font-bold sm:text-[1.938rem] md:text-[2.063rem] lg:text-[2.5rem]">
+            Get in touch
+          </p>
+          <p className="text-center text-[1.25rem] text-accent2 ">
+            Let's work together!
+          </p>
+          <form
+            className="flex flex-col w-5/6 gap-4 mt-12 lg:w-5/8 xl:w-1/2 "
+            onSubmit={handleSubmit}
+            noValidate
+          >
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="Full name"
+              className={`border-2 p-2 rounded ${
+                errors.fname ? "border-red-500" : "border-accent3"
+              }  focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary `}
+              value={formData.fname}
+              onChange={handleChange}
+            />
+            {errors.fname && (
+              <p className="text-red-500 text-sm mb-1 mt-[-10px] mb-[-2px]">
+                {errors.fname}
+              </p>
+            )}
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email address"
+              className={`border-2 p-2 rounded ${
+                errors.email ? "border-red-500" : "border-accent3"
+              } focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary`}
+              value={formData.email}
+              onChange={handleChange}
+            />
+            {errors.email && (
+              <p className="text-red-500 text-sm mb-1 mt-[-10px]  mb-[-2px]">
+                {errors.email}
+              </p>
+            )}
+            <input
+              type="tel"
+              id="number"
+              name="number"
+              placeholder="Phone number"
+              className={`border-2 p-2 rounded ${
+                errors.number ? "border-red-500" : "border-accent3"
+              } focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary`}
+              value={formData.number}
+              onChange={handleChange}
+            />
+            {errors.number && (
+              <p className="text-red-500 text-sm mb-1 mt-[-10px]  mb-[-2px]">
+                {errors.number}
+              </p>
+            )}
+
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              className={`border-2 p-2 rounded w-full ${
+                errors.message ? "border-red-500" : "border-accent3"
+              } focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary `}
+              placeholder="Message"
+              value={formData.message}
+              onChange={handleChange}
+            ></textarea>
+            {errors.message && (
+              <p className="text-red-500 text-sm mt-[-10px] mb-[-2px]">
+                {errors.message}
+              </p>
+            )}
+            <Button className="mt-10">
+              <p className="font-normal text-xl">Submit</p>
+            </Button>
+          </form>
         </div>
       </div>
       <Footer />

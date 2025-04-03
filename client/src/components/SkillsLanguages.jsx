@@ -8,7 +8,7 @@ const SkillsLanguages = ({ logo = "camera", name, items }) => {
           name={logo}
           color="oklch(93.92% 0.0648 128.43)"
           size={48}
-          className="p-2 rounded-xl bg-gradient-primary-to-secondary "
+          className="p-2 rounded-lg bg-gradient-primary-to-secondary "
         />
         <p className="text-skills">{name}</p>
       </div>
