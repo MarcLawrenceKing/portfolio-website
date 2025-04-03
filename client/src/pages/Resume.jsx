@@ -8,14 +8,7 @@ import SkillsLanguages from "../components/SkillsLanguages";
 import Footer from "../components/Footer";
 
 const Resume = () => {
-  const skills = [
-    "Web Development",
-    "Data Science",
-    "Data Science",
-    "Data Science",
-    "Data Science",
-    "Data Science",
-  ];
+  const skills = ["Web Development", "Data Science"];
 
   const languages = [
     "HTML",

@@ -19,6 +19,12 @@ const Contact = () => {
     message: "",
   });
 
+  const [submissionStatus, setSubmissionStatus] = useState({
+    message: "",
+    isSuccess: false,
+    isVisible: false,
+    isSubmitting: false,
+  });
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -73,26 +79,79 @@ const Contact = () => {
     return valid;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validateForm()) {
-      // Form is valid, proceed with submission
-      console.log("Form submitted:", formData);
-      // Here you would typically send the data to your backend
-      alert("Thank you for your message! We'll get back to you soon.");
-      setFormData({
-        fname: "",
-        email: "",
-        number: "",
-        message: "",
+
+    if (!validateForm()) {
+      return;
+    }
+
+    try {
+      // Set submitting state
+      setSubmissionStatus({
+        message: "Submitting...",
+        isSuccess: false,
+        isVisible: true,
+        isSubmitting: true,
+      });
+
+      // Prepare form data
+      const formDataToSend = new URLSearchParams();
+      for (const key in formData) {
+        formDataToSend.append(key, formData[key]);
+      }
+
+      // Send to Google Apps Script
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbxmLwHEG_Y8EA4PtsPOUqVlud2VGxPa6giVgJxa7aAJ18c7_9j3ZBkh3JWiFErD75AL/exec",
+        {
+          redirect: "follow",
+          method: "POST",
+          body: formDataToSend,
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+        }
+      );
+
+      if (response.ok) {
+        setSubmissionStatus({
+          message: "Data submitted successfully!",
+          isSuccess: true,
+          isVisible: true,
+          isSubmitting: false,
+        });
+
+        // Reset form
+        setFormData({
+          fname: "",
+          email: "",
+          number: "",
+          message: "",
+        });
+
+        // Hide message after 2.6 seconds
+        setTimeout(() => {
+          setSubmissionStatus((prev) => ({ ...prev, isVisible: false }));
+        }, 2600);
+      } else {
+        throw new Error("Failed to submit the form.");
+      }
+    } catch (error) {
+      console.error(error);
+      setSubmissionStatus({
+        message: "An error occurred while submitting the form.",
+        isSuccess: false,
+        isVisible: true,
+        isSubmitting: false,
       });
     }
   };
   return (
     <div>
       <Navbar />
-      <div className="flex flex-col justify-center items-center py-30 bg-accent4 px-12 sm:px-28 ">
-        <div className="flex flex-col bg-accent1 w-full items-center p-10 sm:w-110 md:w-155 lg:w-215 xl:w-260">
+      <div className="flex flex-col justify-center items-center py-30 bg-accent1 px-12 sm:px-28 ">
+        <div className="flex flex-col bg-accent4 w-full items-center p-10 rounded-xl sm:w-110 md:w-155 lg:w-215 xl:w-260">
           <DynamicIcon
             name={"mail"}
             color="oklch(93.92% 0.0648 128.43)"
@@ -102,11 +161,23 @@ const Contact = () => {
           <p className="text-center text-[1.75rem] font-bold sm:text-[1.938rem] md:text-[2.063rem] lg:text-[2.5rem]">
             Get in touch
           </p>
-          <p className="text-center text-[1.25rem] text-accent2 ">
+          <p className="text-center text-[1.25rem] text-accent2 mb-12">
             Let's work together!
           </p>
+          {submissionStatus.isVisible && (
+            <div
+              className={`w-full max-w-md p-3 mb-4 rounded-xl text-center ${
+                submissionStatus.isSuccess
+                  ? "bg-green-500 text-beige"
+                  : "bg-red-400 text-white"
+              }`}
+            >
+              {submissionStatus.message}
+            </div>
+          )}
           <form
-            className="flex flex-col w-5/6 gap-4 mt-12 lg:w-5/8 xl:w-1/2 "
+            method="POST"
+            className="flex flex-col w-5/6 gap-4 lg:w-5/8 xl:w-1/2 "
             onSubmit={handleSubmit}
             noValidate
           >
@@ -177,7 +248,9 @@ const Contact = () => {
               </p>
             )}
             <Button className="mt-10">
-              <p className="font-normal text-xl">Submit</p>
+              <p className="font-normal text-xl">
+                {submissionStatus.isSubmitting ? "Submitting..." : "Submit"}
+              </p>
             </Button>
           </form>
         </div>
