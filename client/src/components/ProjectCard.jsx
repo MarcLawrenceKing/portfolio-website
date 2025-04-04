@@ -15,8 +15,11 @@ const ProjectCard = ({
           </p>
           <p>{projectDesc}</p>
         </div>
-        <div className="flex bg-primary flex-3 justify-center">
-          <img src={projectImage} className="h-60 lg:h-100" />
+        <div className="flex bg-accent1 flex-3 justify-center">
+          <img
+            src={projectImage}
+            className="h-60 lg:h-100 border-4 rounded-lg border-primary"
+          />
         </div>
       </div>
     </a>

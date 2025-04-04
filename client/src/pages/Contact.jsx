@@ -82,12 +82,9 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!validateForm()) {
-      return;
-    }
+    if (!validateForm()) return;
 
     try {
-      // Set submitting state
       setSubmissionStatus({
         message: "Submitting...",
         isSuccess: false,
@@ -96,51 +93,60 @@ const Contact = () => {
       });
 
       // Prepare form data
-      const formDataToSend = new URLSearchParams();
-      for (const key in formData) {
-        formDataToSend.append(key, formData[key]);
-      }
+      const formPayload = new URLSearchParams();
+      Object.entries(formData).forEach(([key, value]) => {
+        formPayload.append(key, value);
+      });
 
-      // Send to Google Apps Script
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxmLwHEG_Y8EA4PtsPOUqVlud2VGxPa6giVgJxa7aAJ18c7_9j3ZBkh3JWiFErD75AL/exec",
-        {
-          redirect: "follow",
+      // Try both POST and GET methods
+      const scriptUrl =
+        "https://script.google.com/macros/s/AKfycbxmLwHEG_Y8EA4PtsPOUqVlud2VGxPa6giVgJxa7aAJ18c7_9j3ZBkh3JWiFErD75AL/exec";
+
+      // First attempt with POST
+      let response;
+      try {
+        response = await fetch(scriptUrl, {
           method: "POST",
-          body: formDataToSend,
+          body: formPayload,
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
           },
-        }
-      );
-
-      if (response.ok) {
-        setSubmissionStatus({
-          message: "Data submitted successfully!",
-          isSuccess: true,
-          isVisible: true,
-          isSubmitting: false,
         });
-
-        // Reset form
-        setFormData({
-          fname: "",
-          email: "",
-          number: "",
-          message: "",
-        });
-
-        // Hide message after 2.6 seconds
-        setTimeout(() => {
-          setSubmissionStatus((prev) => ({ ...prev, isVisible: false }));
-        }, 2600);
-      } else {
-        throw new Error("Failed to submit the form.");
+      } catch (postError) {
+        console.log("POST failed, trying GET...", postError);
+        // Fallback to GET if POST fails
+        response = await fetch(`${scriptUrl}?${formPayload.toString()}`);
       }
-    } catch (error) {
-      console.error(error);
+
+      // Check if response is ok (status 200-299)
+      if (!response.ok) {
+        throw new Error(`Server responded with ${response.status}`);
+      }
+
+      // Success handling
       setSubmissionStatus({
-        message: "An error occurred while submitting the form.",
+        message: "Message sent successfully!",
+        isSuccess: true,
+        isVisible: true,
+        isSubmitting: false,
+      });
+
+      setFormData({
+        fname: "",
+        email: "",
+        number: "",
+        message: "",
+      });
+
+      setTimeout(() => {
+        setSubmissionStatus((prev) => ({ ...prev, isVisible: false }));
+      }, 3000);
+    } catch (error) {
+      console.error("Submission error:", error);
+      setSubmissionStatus({
+        message: error.message.includes("Failed to fetch")
+          ? "Network error. Please check your connection."
+          : "Failed to send message. Please try again later.",
         isSuccess: false,
         isVisible: true,
         isSubmitting: false,
