@@ -5,6 +5,8 @@ import Footer from "../components/Footer";
 import { DynamicIcon } from "lucide-react/dynamic";
 
 const Contact = () => {
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbxmLwHEG_Y8EA4PtsPOUqVlud2VGxPa6giVgJxa7aAJ18c7_9j3ZBkh3JWiFErD75AL/exec";
   const [formData, setFormData] = useState({
     fname: "",
     email: "",
@@ -19,138 +21,47 @@ const Contact = () => {
     message: "",
   });
 
-  const [submissionStatus, setSubmissionStatus] = useState({
-    message: "",
-    isSuccess: false,
-    isVisible: false,
-    isSubmitting: false,
-  });
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-
-    // Clear error when user types
-    if (errors[name]) {
-      setErrors((prev) => ({
-        ...prev,
-        [name]: "",
-      }));
-    }
+    setFormData({ ...formData, [name]: value });
   };
 
   const validateForm = () => {
-    let valid = true;
-    const newErrors = { ...errors };
-
-    // Name validation; checks if input is empty
-    if (!formData.fname.trim()) {
-      newErrors.fname = "Full name is required!";
-      valid = false;
-    }
-
-    // Email validation; uses regex
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required!";
-      valid = false;
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = "Please enter a valid email!";
-      valid = false;
-    }
-
-    // Phone number validation (optional)
-    if (formData.number && !/^[\d\s+\-()]{10,}$/.test(formData.number)) {
-      newErrors.number = "Please enter a valid phone number!";
-      valid = false;
-    }
-
-    // Message validation
-    if (!formData.message.trim()) {
-      newErrors.message = "Message is required!";
-      valid = false;
-    } else if (formData.message.trim().length < 10) {
-      newErrors.message = "Message should be at least 10 characters!";
-      valid = false;
-    }
-
+    const newErrors = {};
+    if (!formData.fname.trim()) newErrors.fname = "Name is required!";
+    if (!formData.email.trim()) newErrors.email = "Email is required!";
+    if (!formData.number.trim()) newErrors.number = "Phone number is required!";
+    if (!formData.message.trim()) newErrors.message = "Message is required!";
     setErrors(newErrors);
-    return valid;
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!validateForm()) return;
 
+    const data = new URLSearchParams();
+    data.append("fname", formData.fname);
+    data.append("email", formData.email);
+    data.append("number", formData.number);
+    data.append("message", formData.message);
+
     try {
-      setSubmissionStatus({
-        message: "Submitting...",
-        isSuccess: false,
-        isVisible: true,
-        isSubmitting: true,
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: data,
       });
-
-      // Prepare form data
-      const formPayload = new URLSearchParams();
-      Object.entries(formData).forEach(([key, value]) => {
-        formPayload.append(key, value);
-      });
-
-      // Try both POST and GET methods
-      const scriptUrl =
-        "https://script.google.com/macros/s/AKfycbxmLwHEG_Y8EA4PtsPOUqVlud2VGxPa6giVgJxa7aAJ18c7_9j3ZBkh3JWiFErD75AL/exec";
-
-      // First attempt with POST
-      let response;
-      try {
-        response = await fetch(scriptUrl, {
-          method: "POST",
-          body: formPayload,
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-        });
-      } catch (postError) {
-        console.log("POST failed, trying GET...", postError);
-        // Fallback to GET if POST fails
-        response = await fetch(`${scriptUrl}?${formPayload.toString()}`);
+      const result = await response.json();
+      console.log(result);
+      if (result.result === "success") {
+        alert("Submitted successfully!");
+        setFormData({ fname: "", email: "", number: "", message: "" });
+      } else {
+        alert("Error: " + result.error);
       }
-
-      // Check if response is ok (status 200-299)
-      if (!response.ok) {
-        throw new Error(`Server responded with ${response.status}`);
-      }
-
-      // Success handling
-      setSubmissionStatus({
-        message: "Message sent successfully!",
-        isSuccess: true,
-        isVisible: true,
-        isSubmitting: false,
-      });
-
-      setFormData({
-        fname: "",
-        email: "",
-        number: "",
-        message: "",
-      });
-
-      setTimeout(() => {
-        setSubmissionStatus((prev) => ({ ...prev, isVisible: false }));
-      }, 3000);
     } catch (error) {
-      console.error("Submission error:", error);
-      setSubmissionStatus({
-        message: error.message.includes("Failed to fetch")
-          ? "Network error. Please check your connection."
-          : "Failed to send message. Please try again later.",
-        isSuccess: false,
-        isVisible: true,
-        isSubmitting: false,
-      });
+      alert("Failed to submit. Please try again.");
     }
   };
   return (
@@ -168,17 +79,7 @@ const Contact = () => {
         <p className="text-center text-[1.25rem] text-accent2 mb-12">
           Let's work together!
         </p>
-        {submissionStatus.isVisible && (
-          <div
-            className={`w-full max-w-md p-3 mb-4 rounded-xl text-center ${
-              submissionStatus.isSuccess
-                ? "bg-green-500 text-beige"
-                : "bg-red-400 text-white"
-            }`}
-          >
-            {submissionStatus.message}
-          </div>
-        )}
+
         <form
           method="POST"
           className="flex flex-col w-5/6 gap-4 lg:w-5/8 xl:w-1/2 "
@@ -252,9 +153,7 @@ const Contact = () => {
             </p>
           )}
           <Button className="mt-10">
-            <p className="font-normal text-xl">
-              {submissionStatus.isSubmitting ? "Submitting..." : "Submit"}
-            </p>
+            <p className="font-normal text-xl">Submit</p>
           </Button>
         </form>
       </div>
