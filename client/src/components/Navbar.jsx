@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Button from "./Button";
 import NavList from "./NavList";
 import { DynamicIcon } from "lucide-react/dynamic";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +15,9 @@ const Navbar = () => {
     <div className="fixed top-0 right-0 left-0 z-2 shadow">
       <div className="flex justify-between items-center bg-accent1 h-15 px-10 ">
         <div className="">
-          <p className="w-30 text-primary font-bold text-xl">My Portfolio</p>
+          <Link to="/portfolio-website">
+            <p className="w-30 text-primary font-bold text-xl">My Portfolio</p>
+          </Link>
         </div>
 
         <div className="">

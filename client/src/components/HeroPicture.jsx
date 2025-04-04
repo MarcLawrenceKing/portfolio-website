@@ -3,7 +3,7 @@ import Button from "./Button";
 import NavList from "./NavList";
 import { DynamicIcon } from "lucide-react/dynamic";
 import profilePic from "../assets/profile.png";
-const HeaderPicture = () => {
+const HeroPicture = () => {
   return (
     <div className="d-flex justify-content-center mt-5 mt-xxl-0 ">
       <div className="profile bg-gradient-primary-to-secondary ">
@@ -163,4 +163,4 @@ const HeaderPicture = () => {
   );
 };
 
-export default HeaderPicture;
+export default HeroPicture;

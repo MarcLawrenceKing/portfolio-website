@@ -19,72 +19,68 @@ const Resume = () => {
     "Tailwind CSS",
   ];
   return (
-    <div>
-      <Navbar />
-      <div className="flex flex-col gap-2 justify-center items-center py-30 bg-accent4 px-12 sm:px-28">
-        <p className="text-section-title">Resume</p>
-        <div className="flex flex-col-reverse gap-10 items-center justify-between mb-5 mt-5 w-125 sm:gap-0 sm:flex-row md:w-160 lg:w-180 xl:w-200">
-          <p className="text-resume-header text-primary">Certifications</p>
+    <div className="flex flex-col gap-2 justify-center items-center py-30 bg-accent4 px-12 sm:px-28">
+      <p className="text-section-title">Resume</p>
+      <div className="flex flex-col-reverse gap-10 items-center justify-between mb-5 mt-5 w-125 sm:gap-0 sm:flex-row md:w-160 lg:w-180 xl:w-200">
+        <p className="text-resume-header text-primary">Certifications</p>
+        <a
+          href="https://www.canva.com/design/DAGTJNTlXbM/G37zun6D4B09cUu83ERMlQ/edit"
+          target="_blank"
+        >
           <Button size="lg">
-            {" "}
             <DynamicIcon name="download" color="white" size={22} />{" "}
             <p className="font-normal">Download Resume</p>
           </Button>
-        </div>
-        <div className="flex flex-col gap-10">
-          <ResumeCard>
-            <Certification
-              year="2023"
-              title="30 Days of Frontend"
-              org="AWS Cloud Clubs"
-              place="Manila City"
-              description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, corrupti, maiores in mollitia distinctio eligendi ullam atque perferendis tempora quae temporibus quo voluptatem adipisci cum voluptatibus esse placeat libero eaque."
-            />
-          </ResumeCard>
-          <ResumeCard>
-            <Certification
-              year="2023"
-              title="30 Days of Frontend"
-              org="AWS Cloud Clubs"
-              place="Manila City"
-              description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, corrupti, maiores in mollitia distinctio eligendi ullam atque perferendis tempora quae temporibus quo voluptatem adipisci cum voluptatibus esse placeat libero eaque."
-            />
-          </ResumeCard>
-          <ResumeCard>
-            <Certification
-              year="2023"
-              title="30 Days of Frontend"
-              org="AWS Cloud Clubs"
-              place="Manila City"
-              description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, corrupti, maiores in mollitia distinctio eligendi ullam atque perferendis tempora quae temporibus quo voluptatem adipisci cum voluptatibus esse placeat libero eaque. "
-            />
-          </ResumeCard>
-        </div>
-        <div className="flex items-center justify-center mb-5 mt-5 w-125 sm:justify-start md:w-160 lg:w-180 xl:w-200">
-          <p className="text-resume-header text-accent2">Education</p>
-        </div>
-        <div className="flex flex-col gap-10">
-          <ResumeCard>
-            <Education
-              year="2022-2026"
-              school="Polytechnic University of the Philipiines Manila"
-              place="Manila City"
-              degree="Undergraduate"
-              course="BS Information Technology"
-              description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, corrupti, maiores in mollitia distinctio eligendi ullam atque perferendis tempora quae temporibus quo voluptatem adipisci cum voluptatibus esse placeat libero eaque."
-            />
-          </ResumeCard>
-          <ResumeCard className="flex gap-12 flex-col mt-14">
-            <SkillsLanguages logo="hammer" name="Skills" items={skills} />
-            <SkillsLanguages
-              logo="code-xml"
-              name="Languages"
-              items={languages}
-            />
-          </ResumeCard>
-        </div>
+        </a>
       </div>
-      <Footer />
+      <div className="flex flex-col gap-10">
+        <ResumeCard>
+          <Certification
+            year="2023"
+            title="30 Days of Frontend"
+            org="AWS Cloud Clubs"
+            place="Manila City"
+            description="Built a strong foundation in front-end web development with HTML, CSS, and JavaScript by creating small, hands-on projects that put theory into practice. "
+          />
+        </ResumeCard>
+        <ResumeCard>
+          <Certification
+            year="2024"
+            title="Java Programming"
+            org="Joysis TECH VOC INC."
+            place="Malabon City"
+            description="Reviewed core programming concepts and gained experience with Object-Oriented Programming (OOP), the MVC design pattern, and JDBC for MySQL database connectivity. Applied these skills by building a simple CRUD application as a final group project."
+          />
+        </ResumeCard>
+        <ResumeCard>
+          <Certification
+            year="2024"
+            title="Data Management Workshop"
+            org="MapaKalamidadPH"
+            place="Quezon City"
+            description="Learned the importance of open-source data extraction for disaster response. Utilized an open-source API providing JSON data to visualize flood patterns in Tableau."
+          />
+        </ResumeCard>
+      </div>
+      <div className="flex items-center justify-center mb-5 mt-5 w-125 sm:justify-start md:w-160 lg:w-180 xl:w-200">
+        <p className="text-resume-header text-accent2">Education</p>
+      </div>
+      <div className="flex flex-col gap-10">
+        <ResumeCard>
+          <Education
+            year="2022-2026"
+            school="Polytechnic University of the Philipiines Manila"
+            place="Manila City"
+            degree="Undergraduate"
+            course="BS Information Technology"
+            description="DOST RA 7687 scholar and consistent president lister, actively engaged in student tech organizations. Took on leadership roles and contributed to initiatives while exploring diverse IT fields including web development, cloud computing, data science, and cybersecurity."
+          />
+        </ResumeCard>
+        <ResumeCard className="flex gap-12 flex-col mt-14">
+          <SkillsLanguages logo="hammer" name="Skills" items={skills} />
+          <SkillsLanguages logo="code-xml" name="Languages" items={languages} />
+        </ResumeCard>
+      </div>
     </div>
   );
 };

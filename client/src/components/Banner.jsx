@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "./Button";
 
 const Banner = () => {
@@ -6,9 +7,15 @@ const Banner = () => {
       <p className="font-bold text-accent4 text-center text-[2.188rem] sm:text-[2.5rem] md:text-[2.75rem] lg:text-[3.125rem] xl:text-[3.5rem] ">
         Let's build something together
       </p>
-      <Button variant="secondary" size="lg" className="border-accent4">
-        <p className="text-accent4">Contact me</p>
-      </Button>
+      <Link to="/portfolio-website/contact">
+        <Button
+          variant="secondary"
+          size="lg"
+          className="border-accent4 hover:border-accent2"
+        >
+          <p className="text-white">Contact me</p>
+        </Button>
+      </Link>
     </div>
   );
 };
