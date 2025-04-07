@@ -7,9 +7,11 @@ const Button = ({
   className,
   children,
   type = "submit",
+  isDisabled = false,
   ...props
 }) => {
-  const baseStyles = "rounded-lg transition";
+  const baseStyles =
+    "rounded-lg transition disabled:bg-accent2 disabled:cursor-not-allowed";
 
   const variantStyles = {
     toggle: "sm:hidden ",
@@ -37,6 +39,7 @@ const Button = ({
         sizeStyles[size],
         className
       )}
+      disabled={isDisabled}
       {...props}
     >
       {children}

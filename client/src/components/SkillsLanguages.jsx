@@ -15,7 +15,7 @@ const SkillsLanguages = ({ logo = "camera", name, items }) => {
       <div>
         <ul className="flex flex-col gap-4 mt-4 md:grid md:grid-cols-3 md:items-center">
           {items.map((item, index) => (
-            <li className="flex bg-accent4 p-4 px-8 rounded-xl" key={index}>
+            <li className="flex bg-accent5 p-4 px-8 rounded-xl" key={index}>
               {item}
             </li>
           ))}

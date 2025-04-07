@@ -1,11 +1,9 @@
 import { DynamicIcon } from "lucide-react/dynamic";
 import Button from "../components/Button";
 import Certification from "../components/Certification";
-import Navbar from "../components/Navbar";
 import ResumeCard from "../components/ResumeCard";
 import Education from "../components/Education";
 import SkillsLanguages from "../components/SkillsLanguages";
-import Footer from "../components/Footer";
 
 const Resume = () => {
   const skills = ["Web Development", "Data Science"];

@@ -1,8 +1,6 @@
 import Button from "../components/Button";
 import HeroPicture from "../components/HeroPicture";
 import AboutMe from "../components/AboutMe";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
