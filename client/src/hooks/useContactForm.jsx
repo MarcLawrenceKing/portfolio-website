@@ -35,34 +35,34 @@ const useContactForm = () => {
 
   const validateForm = () => {
     let valid = true;
-    // const newErrors = { ...errors };
-    // // Name validation; checks if input is empty
-    // if (!formData.fname.trim()) {
-    //   newErrors.fname = "Full name is required!";
-    //   valid = false;
-    // }
-    // // Email validation; uses regex
-    // if (!formData.email.trim()) {
-    //   newErrors.email = "Email is required!";
-    //   valid = false;
-    // } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-    //   newErrors.email = "Please enter a valid email!";
-    //   valid = false;
-    // }
-    // // Phone number validation (optional)
-    // if (formData.number && !/^[\d\s+\-()]{10,}$/.test(formData.number)) {
-    //   newErrors.number = "Please enter a valid phone number!";
-    //   valid = false;
-    // }
-    // // Message validation
-    // if (!formData.message.trim()) {
-    //   newErrors.message = "Message is required!";
-    //   valid = false;
-    // } else if (formData.message.trim().length < 10) {
-    //   newErrors.message = "Message should be at least 10 characters!";
-    //   valid = false;
-    // }
-    // setErrors(newErrors);
+    const newErrors = { ...errors };
+    // Name validation; checks if input is empty
+    if (!formData.fname.trim()) {
+      newErrors.fname = "Full name is required!";
+      valid = false;
+    }
+    // Email validation; uses regex
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required!";
+      valid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email!";
+      valid = false;
+    }
+    // Phone number validation (optional)
+    if (formData.number && !/^[\d\s+\-()]{10,}$/.test(formData.number)) {
+      newErrors.number = "Please enter a valid phone number!";
+      valid = false;
+    }
+    // Message validation
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required!";
+      valid = false;
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = "Message should be at least 10 characters!";
+      valid = false;
+    }
+    setErrors(newErrors);
     return valid;
   };
 
