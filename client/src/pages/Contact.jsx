@@ -22,7 +22,7 @@ const Contact = () => {
         </p>
         {submissionStatus.isVisible && (
           <div
-            className={`w-full p-3 mb-4 rounded-lg text-center sm:w-3/4 lg:w-1/2 ${
+            className={`w-5/6 p-3 mb-4 rounded-lg text-center sm:w-3/4 lg:w-1/2 ${
               submissionStatus.isSubmitting
                 ? "bg-accent2 text-white"
                 : submissionStatus.isSuccess
