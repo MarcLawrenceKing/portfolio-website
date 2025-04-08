@@ -6,18 +6,18 @@ const Contact = () => {
   const { formData, errors, submissionStatus, handleChange, handleSubmit } =
     useContactForm();
   return (
-    <div className="flex flex-col justify-center items-center py-30 bg-accent4 px-12 sm:px-28 ">
-      <div className="flex flex-col bg-accent1 w-full items-center p-10 rounded-xl sm:w-110 md:w-155 lg:w-215 xl:w-260">
+    <div className="flex flex-col justify-center items-center py-30 bg-accent4 px-12 sm:px-28 overflow-x-hidden ">
+      <div className="flex flex-col bg-accent1 w-full items-center py-10 rounded-xl sm:w-110 md:w-155 lg:w-215 xl:w-260 ">
         <DynamicIcon
           name={"mail"}
           color="oklch(93.92% 0.0648 128.43)"
           size={48}
           className="p-2 rounded-lg bg-gradient-primary-to-secondary mb-2 "
         />
-        <p className="text-center text-[1.75rem] font-bold sm:text-[1.938rem] md:text-[2.063rem] lg:text-[2.5rem]">
+        <p className="text-center px-10 text-[1.75rem] font-bold sm:text-[1.938rem] md:text-[2.063rem] lg:text-[2.5rem]">
           Get in touch
         </p>
-        <p className="text-center text-[1.25rem] text-accent2 mb-12">
+        <p className="text-center px-10 text-[1.25rem] text-accent2 mb-12">
           Let's work together!
         </p>
         {submissionStatus.isVisible && (

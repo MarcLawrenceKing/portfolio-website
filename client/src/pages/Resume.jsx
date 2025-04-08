@@ -56,19 +56,20 @@ const Resume = () => {
     "Tailwind CSS",
   ];
   return (
-    <div className="flex flex-col gap-2 justify-center items-center py-30 bg-accent4 px-12 sm:px-28">
+    <div className="flex flex-col justify-center items-center py-30 bg-accent4 px-12 sm:px-28 overflow-x-hidden">
       <p className="text-section-title">Resume</p>
-      <div className="flex flex-col-reverse gap-10 items-center justify-between mb-5 mt-5 w-125 sm:gap-0 sm:flex-row md:w-160 lg:w-180 xl:w-200">
+      <div className="flex flex-col-reverse gap-10 items-center justify-between mb-5 mt-5 w-110 sm:gap-0 sm:flex-row md:w-160 lg:w-180 xl:w-200">
         <p className="text-resume-header text-primary">Certifications</p>
-        <a
-          href="https://www.canva.com/design/DAGTJNTlXbM/G37zun6D4B09cUu83ERMlQ/edit"
-          target="_blank"
-        >
-          <Button size="lg">
-            <DynamicIcon name="download" color="white" size={22} />{" "}
-            <p className="font-normal">Download Resume</p>
-          </Button>
-        </a>
+
+        <Button size="dl" className="w-1/2 ">
+          <DynamicIcon name="download" color="white" size={22} />{" "}
+          <a
+            href="https://www.canva.com/design/DAGTJNTlXbM/G37zun6D4B09cUu83ERMlQ/edit"
+            target="_blank"
+          >
+            <p className="font-normal text-sm sm:text-base">Download Resume</p>
+          </a>
+        </Button>
       </div>
       <div className="flex flex-col gap-10">
         {certifications.map((certification, index) => (
