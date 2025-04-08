@@ -9,7 +9,7 @@ const ProjectCard = ({
   return (
     <a href={projectLink} target="_blank">
       <div className="flex flex-col-reverse mx-10 shadow-xl rounded-xl overflow-hidden bg-primary sm:w-120 md:w-150 lg:w-200 lg:flex-row">
-        <div className="flex flex-col p-8 pt-8 justify-center gap-2 flex-4 sm:p-10">
+        <div className="flex flex-col p-8 pt-2 justify-center gap-4 flex-4 sm:px-10">
           <p className="font-bold text-[2rem] text-center text-white lg:text-start">
             {projectName}
           </p>
