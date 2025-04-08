@@ -12,12 +12,12 @@ const Hero = () => {
           <p className="text-hero2">I can help your business</p>
           <p className="text-hero1">go online with modern websites.</p>
           <div className="flex flex-col gap-3 mt-12 w-full justify-center sm:flex-row sm:gap-9 2xl:justify-start">
-            <Link to="/portfolio-website/resume">
+            <Link to="/resume">
               <Button size="lg">
                 <p className="text-btn">Resume</p>
               </Button>
             </Link>
-            <Link to="/portfolio-website/projects">
+            <Link to="/projects">
               <Button variant="secondary" size="lg">
                 <p className="text-btn">Projects</p>
               </Button>

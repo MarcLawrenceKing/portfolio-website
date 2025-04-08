@@ -7,7 +7,7 @@ const Banner = () => {
       <p className="font-bold text-accent4 text-center text-[2.188rem] sm:text-[2.5rem] md:text-[2.75rem] lg:text-[3.125rem] xl:text-[3.5rem] ">
         Let's build something together
       </p>
-      <Link to="/portfolio-website/contact">
+      <Link to="/contact">
         <Button
           variant="secondary"
           size="lg"

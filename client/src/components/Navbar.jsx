@@ -15,7 +15,7 @@ const Navbar = () => {
     <div className="fixed top-0 right-0 left-0 z-2 shadow">
       <div className="flex justify-between items-center bg-accent1 h-15 px-10 ">
         <div className="">
-          <Link to="/portfolio-website">
+          <Link to="/">
             <p className="w-30 text-primary font-bold text-xl">My Portfolio</p>
           </Link>
         </div>

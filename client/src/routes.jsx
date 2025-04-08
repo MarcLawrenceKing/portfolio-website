@@ -7,10 +7,10 @@ import Contact from "./pages/Contact";
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/portfolio-website" element={<Hero />} />
-      <Route path="/portfolio-website/resume" element={<Resume />} />
-      <Route path="/portfolio-website/projects" element={<Projects />} />
-      <Route path="/portfolio-website/contact" element={<Contact />} />
+      <Route path="/" element={<Hero />} />
+      <Route path="/resume" element={<Resume />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   );
 };

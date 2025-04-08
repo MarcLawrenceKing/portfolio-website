@@ -14,8 +14,7 @@ const Projects = () => {
       projectName: "Portfolio Website (2025)",
       projectDesc:
         "Enhanced my portfolio website using frameworks like Vite and React, along with Tailwind CSS for styling. Integrated the Google Apps Scripts to collect data from the contact form.",
-      projectLink:
-        "https://github.com/MarcLawrenceKing/AWSCC-PUP-Main-Frontend-Workshop",
+      projectLink: "https://github.com/MarcLawrenceKing/portfolio-website",
     },
     {
       projectImage: projectsparkfest,

@@ -1,7 +1,3 @@
-import { useEffect, useState } from "react";
-import Button from "./Button";
-import NavList from "./NavList";
-import { DynamicIcon } from "lucide-react/dynamic";
 import profilePic from "../assets/profile.png";
 const HeroPicture = () => {
   return (
