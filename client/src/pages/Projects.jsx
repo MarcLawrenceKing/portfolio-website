@@ -6,9 +6,17 @@ import projectdataviz from "../assets/datavizproject.jpg";
 import projectportfolio from "../assets/portfolioproject.jpg";
 import projectsparkfest from "../assets/sparkfestproject.jpg";
 import projectexquizseat from "../assets/exquizseatproject.jpg";
+import projectattendance from "../assets/attendanceproject.jpg";
 
 const Projects = () => {
   const projects = [
+    {
+      projectImage: projectattendance,
+      projectName: "Attendance Mo 'To (2025)",
+      projectDesc:
+        "A basic attendance monitoring system developed as our final project for the Applications Development course, built using ASP .NET Core MVC as a full-stack web framework and a local MS SQL Server as the database.",
+      projectLink: "https://github.com/MarcLawrenceKing/appdev-final-req",
+    },
     {
       projectImage: projectportfolio,
       projectName: "Portfolio Website (2025)",
