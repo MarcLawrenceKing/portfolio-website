@@ -8,7 +8,7 @@ const AboutMe = () => {
         My name is Marc King and I help brands grow.
       </p>
       <p className="text-aboutme-subtitle2">
-        I am a motivated IT student with a background in front-end web
+        I am a motivated IT student with a background in full-stack web
         development, data science, and cybersecurity!
       </p>
       <SocialsSVGSection />

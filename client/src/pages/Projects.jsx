@@ -7,43 +7,51 @@ import projectportfolio from "../assets/portfolioproject.jpg";
 import projectsparkfest from "../assets/sparkfestproject.jpg";
 import projectexquizseat from "../assets/exquizseatproject.jpg";
 import projectattendance from "../assets/attendanceproject.jpg";
+import projectbotomoto from "../assets/botomotoproject.jpg";
 
 const Projects = () => {
   const projects = [
     {
+      projectImage: projectbotomoto,
+      projectName: "Boto Mo 'To (2025)",
+      projectDesc:
+        "An online voting system developed as our capstone project, built using Next.js, Prisma ORM, and Supabase. It also uses AWS S3, and AWS SES.",
+      projectLink: "https://github.com/Boto-Mo-To-Capstone-Project/BotoMoTo/",
+    },
+    {
       projectImage: projectattendance,
       projectName: "Attendance Mo 'To (2025)",
       projectDesc:
-        "A basic attendance monitoring system developed as our final project for the Applications Development course, built using ASP .NET Core MVC as a full-stack web framework and a local MS SQL Server as the database.",
+        "A basic attendance monitoring system developed as our final project for the Applications Development course, built using ASP .NET Core MVC and a local MS SQL Server.",
       projectLink: "https://github.com/MarcLawrenceKing/appdev-final-req",
     },
     {
       projectImage: projectportfolio,
       projectName: "Portfolio Website (2025)",
       projectDesc:
-        "Enhanced my portfolio website using frameworks like Vite and React, along with Tailwind CSS for styling. Integrated the Google Apps Scripts to collect data from the contact form.",
+        "Enhanced my portfolio website using Vite & React, and Tailwind CSS for styling. Integrated the Google Apps Scripts to collect data from the contact form.",
       projectLink: "https://github.com/MarcLawrenceKing/portfolio-website",
     },
     {
       projectImage: projectsparkfest,
       projectName: "Sparkfest Website (2025)",
       projectDesc:
-        "Contributed to the development of the official hackathon website for Google Developer Groups on Campus - PUP using Vite + React and Tailwind CSS, adhering closely to the Figma prototype. Created a fully responsive highlights section for all screen sizes and learned how to apply dynamic colors to SVGs exported from Figma. Used GitHub for version control and team collaboration.",
+        "Contributed to the development of the official hackathon website for Google Developer Groups on Campus - PUP using Vite + React and Tailwind CSS.",
       projectLink: "https://github.com/Google-DSC-PUP/sparkfest-2025",
     },
-    {
-      projectImage: project30days,
-      projectName: "30 Days of Frontend (2023)",
-      projectDesc:
-        "Utilized HTML, CSS, and JavaScript to build simple projects, including a blog website, a rock-paper-scissors game, and a number guessing game, to apply my front end knowledge.",
-      projectLink:
-        "https://github.com/MarcLawrenceKing/AWSCC-PUP-Main-Frontend-Workshop",
-    },
+    // {
+    //   projectImage: project30days,
+    //   projectName: "30 Days of Frontend (2023)",
+    //   projectDesc:
+    //     "Utilized HTML, CSS, and JavaScript to build simple projects, including a blog website, a rock-paper-scissors game, and a number guessing game, to apply my front end knowledge.",
+    //   projectLink:
+    //     "https://github.com/MarcLawrenceKing/AWSCC-PUP-Main-Frontend-Workshop",
+    // },
     {
       projectImage: projectexquizseat,
       projectName: "ExQuizSeat - Mobile Quiz App (2024)",
       projectDesc:
-        "Participated in the IT Skills Olympics 2024 - Android App Development Category, an intercollegiate competition, as part of a 3-member team. Contributed to the creation of the Figma design and the front-end coding using React Native. This project was my first experience working collaboratively with GitHub for version control, enhancing teamwork and project management.",
+        "Participated in the IT Skills Olympics 2024 - Android App Development Category. This project was my first experience working collaboratively with GitHub.",
       projectLink:
         "https://docs.google.com/document/d/1ItywXoAIUPukKYIV-g_E0Ep7Xno2eD18i2qK0oyJLRg/edit?tab=t.0",
     },

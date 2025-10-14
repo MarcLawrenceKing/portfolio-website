@@ -6,14 +6,24 @@ import Education from "../components/Education";
 import SkillsLanguages from "../components/SkillsLanguages";
 
 const Resume = () => {
+  const experience = [
+    {
+      year: "2025",
+      title: "Laravel Developer",
+      org: "DOST Central Office",
+      place: "Remote",
+      description:
+        "Assisted in developing a full-stack intern management system using Laravel (Blade), Bootstrap, and MySQL on a local environment. Contributed to the creation of multiple CRUD modules, and helped design a dashboard that visualized key internship metrics.",
+    },
+  ];
   const certifications = [
     {
-      year: "2023",
-      title: "30 Days of Frontend",
-      org: "AWS Cloud Clubs",
-      place: "Manila City",
+      year: "2025",
+      title: "FCF in Cybersecurity",
+      org: "Fortinet Training Institute",
+      place: "Self-Paced",
       description:
-        "Built a strong foundation in front-end web development with HTML, CSS, and JavaScript by creating small, hands-on projects that put theory into practice.",
+        "Earned the Fortinet Certified Fundamentals in Cybersecurity certification, gaining foundational knowledge of key cybersecurity concepts and terminologies.",
     },
     {
       year: "2024",
@@ -45,21 +55,21 @@ const Resume = () => {
     },
   ];
 
-  const skills = ["Web Development", "Data Science"];
+  const skills = ["Web Development", "Data Science", "Cybersecurity"];
 
   const languages = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "Vite + React",
+    "HTML, CSS, & JS",
+    "React.js",
+    "Next.js",
+    ".NET MVC Core",
+    "Laravel",
     "Tailwind CSS",
   ];
   return (
     <div className="flex flex-col justify-center items-center py-30 bg-accent4 px-12 sm:px-28 overflow-x-hidden">
       <p className="text-section-title">Resume</p>
       <div className="flex flex-col-reverse gap-10 items-center justify-between mb-5 mt-5 w-110 sm:gap-0 sm:flex-row md:w-160 lg:w-180 xl:w-200">
-        <p className="text-resume-header text-primary">Certifications</p>
+        <p className="text-resume-header text-primary">Experience</p>
 
         <Button size="dl" className="w-1/2 ">
           <DynamicIcon name="download" color="white" size={22} />{" "}
@@ -72,6 +82,16 @@ const Resume = () => {
         </Button>
       </div>
       <div className="flex flex-col gap-10">
+        {experience.map((certification, index) => (
+          <ResumeCard>
+            <Certification key={index} {...certification} />
+          </ResumeCard>
+        ))}
+      </div>
+      <div className="flex items-center justify-center mb-5 mt-5 w-125 sm:justify-start md:w-160 lg:w-180 xl:w-200">
+        <p className="text-resume-header text-primary">Certifications</p>
+      </div>
+      <div className="flex flex-col gap-10">
         {certifications.map((certification, index) => (
           <ResumeCard>
             <Certification key={index} {...certification} />
@@ -79,7 +99,7 @@ const Resume = () => {
         ))}
       </div>
       <div className="flex items-center justify-center mb-5 mt-5 w-125 sm:justify-start md:w-160 lg:w-180 xl:w-200">
-        <p className="text-resume-header text-accent2">Education</p>
+        <p className="text-resume-header text-primary">Education</p>
       </div>
       <div className="flex flex-col gap-10">
         {education.map((educationz, index) => (
