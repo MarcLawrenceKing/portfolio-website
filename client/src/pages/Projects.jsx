@@ -8,30 +8,38 @@ import projectsparkfest from "../assets/sparkfestproject.jpg";
 import projectexquizseat from "../assets/exquizseatproject.jpg";
 import projectattendance from "../assets/attendanceproject.jpg";
 import projectbotomoto from "../assets/botomotoproject.jpg";
+import projectmailmerge from "../assets/mailmergeproject.jpg";
 
 const Projects = () => {
   const projects = [
     {
+      projectImage: projectmailmerge,
+      projectName: "Simple Mail Merge (2026)",
+      projectDesc:
+        "Built a mail-merge web application using React.js, Express.js, Supabase, Resend, Vercel, AWS Lambda, and API Gateway, enabling students to send personalized OJT application emails efficiently.",
+      projectLink: "https://github.com/MarcLawrenceKing/mail-merge",
+    },
+    {
       projectImage: projectbotomoto,
       projectName: "Boto Mo 'To (2025)",
       projectDesc:
-        "An online voting system developed as our capstone project, built using Next.js, Prisma ORM, and Supabase. It also uses AWS S3, and AWS SES.",
+        "Co-developed an online voting system SaaS using Next.js, Tailwind CSS, Supabase, Prisma, AWS S3, Resend, and Vercel focused on secure, accessible, and user-friendly voting for small organizations",
       projectLink: "https://github.com/Boto-Mo-To-Capstone-Project/BotoMoTo/",
     },
     {
       projectImage: projectattendance,
       projectName: "Attendance Mo 'To (2025)",
       projectDesc:
-        "A basic attendance monitoring system developed as our final project for the Applications Development course, built using ASP .NET Core MVC and a local MS SQL Server.",
+        "Co-developed an attendance tracking system using ASP.NET MVC, MS SQL Server, and Bootstrap, designed for real-world use by a local church organization.",
       projectLink: "https://github.com/MarcLawrenceKing/appdev-final-req",
     },
-    {
-      projectImage: projectportfolio,
-      projectName: "Portfolio Website (2025)",
-      projectDesc:
-        "Enhanced my portfolio website using Vite & React, and Tailwind CSS for styling. Integrated the Google Apps Scripts to collect data from the contact form.",
-      projectLink: "https://github.com/MarcLawrenceKing/portfolio-website",
-    },
+    // {
+    //   projectImage: projectportfolio,
+    //   projectName: "Portfolio Website (2025)",
+    //   projectDesc:
+    //     "Enhanced my portfolio website using Vite & React, and Tailwind CSS for styling. Integrated the Google Apps Scripts to collect data from the contact form.",
+    //   projectLink: "https://github.com/MarcLawrenceKing/portfolio-website",
+    // },
     {
       projectImage: projectsparkfest,
       projectName: "Sparkfest Website (2025)",
@@ -51,7 +59,7 @@ const Projects = () => {
       projectImage: projectexquizseat,
       projectName: "ExQuizSeat - Mobile Quiz App (2024)",
       projectDesc:
-        "Participated in the IT Skills Olympics 2024 - Android App Development Category. This project was my first experience working collaboratively with GitHub.",
+        "Co-developed a mobile quiz application using React Native for an intercollegiate Android app development competition.",
       projectLink:
         "https://docs.google.com/document/d/1ItywXoAIUPukKYIV-g_E0Ep7Xno2eD18i2qK0oyJLRg/edit?tab=t.0",
     },

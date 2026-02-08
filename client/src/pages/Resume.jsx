@@ -9,7 +9,7 @@ const Resume = () => {
   const experience = [
     {
       year: "2025",
-      title: "Laravel Developer",
+      title: "Laravel Developer Intern",
       org: "DOST Central Office",
       place: "Remote",
       description:
@@ -58,11 +58,11 @@ const Resume = () => {
   const skills = ["Web Development", "Data Science", "Cybersecurity"];
 
   const languages = [
-    "HTML, CSS, & JS",
-    "React.js",
     "Next.js",
-    ".NET MVC Core",
+    "Express.js",
     "Laravel",
+    ".NET MVC Webapp",
+    "Bootstrap",
     "Tailwind CSS",
   ];
   return (
