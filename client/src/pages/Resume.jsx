@@ -13,7 +13,7 @@ const Resume = () => {
       org: "DOST Central Office",
       place: "Remote",
       description:
-        "Assisted in developing a full-stack intern management system using Laravel (Blade), Bootstrap, and MySQL on a local environment. Contributed to the creation of multiple CRUD modules, and helped design a dashboard that visualized key internship metrics.",
+        "Contributed to an intern management system built with Laravel, MySQL, and Bootstrap, implementing 8 CRUD modules and data visualization dashboards to manage 100+ interns at the DOST Central Office.",
     },
   ];
   const certifications = [
