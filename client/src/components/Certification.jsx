@@ -9,7 +9,7 @@ const Certification = ({ year, title, org, place, description }) => {
         <p className="text-[0.875rem] text-gray text-center">{org}</p>
         <p className="text-[0.875rem] text-gray text-center">{place}</p>
       </div>
-      <div className="flex flex-2 items-center p-5">
+      <div className="flex flex-2 items-center px-2 p-5">
         <p className="text-justify">{description}</p>
       </div>
     </div>

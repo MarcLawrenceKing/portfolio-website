@@ -66,12 +66,12 @@ const Resume = () => {
     "Tailwind CSS",
   ];
   return (
-    <div className="flex flex-col justify-center items-center py-30 bg-accent4 px-12 sm:px-28 overflow-x-hidden">
+    <div className="flex flex-col justify-center items-center py-30 bg-accent4 px-5 sm:px-28 overflow-x-hidden">
       <p className="text-section-title">Resume</p>
-      <div className="flex flex-col-reverse gap-10 items-center justify-between mb-5 mt-5 w-110 sm:gap-0 sm:flex-row md:w-160 lg:w-180 xl:w-200">
+      <div className="w-full flex flex-col-reverse gap-10 items-center justify-between mb-5 mt-5 sm:w-100 sm:flex-row md:w-160 lg:w-180 xl:w-200">
         <p className="text-resume-header text-primary">Experience</p>
 
-        <Button size="dl" className="w-1/2 ">
+        <Button size="dl" className="w-full">
           <DynamicIcon name="download" color="white" size={22} />{" "}
           <a
             href="https://www.canva.com/design/DAGTJNTlXbM/G37zun6D4B09cUu83ERMlQ/edit"

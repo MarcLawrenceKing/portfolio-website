@@ -25,10 +25,10 @@ const Button = ({
   };
 
   const sizeStyles = {
-    sm: "px-3 py-1 text-sm",
+    sm: "py-1 text-sm",
     md: "px-3 py-2 text-base",
     lg: "px-10 sm:px-8 py-4 text-lg",
-    dl: "px-0  py-4 text-lg",
+    dl: "px-3 py-4 text-lg",
   };
 
   return (
