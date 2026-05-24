@@ -2,13 +2,26 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useSyncExternalStore } from "react";
-import { FaMoon, FaSun } from "react-icons/fa6";
+import { useState, useSyncExternalStore } from "react";
+import { FaBars, FaMoon, FaSun, FaXmark } from "react-icons/fa6";
 import { awardsAndEducation, experience, featuredProjects, techStack } from "./portfolio-content";
 import { getServerThemeSnapshot, getThemeSnapshot, subscribeThemeChange, toggleTheme } from "./theme";
 
+const navigationItems = [
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+  { href: "#tech-stack", label: "Tech Stack" },
+  { href: "#education", label: "Education" },
+  { href: "#contact", label: "Contact" },
+];
+
 export default function Home() {
   const theme = useSyncExternalStore(subscribeThemeChange, getThemeSnapshot, getServerThemeSnapshot);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   const handleThemeToggle = () => {
     toggleTheme();
@@ -20,62 +33,115 @@ export default function Home() {
     }
 
     event.preventDefault();
+    closeMenu();
     window.history.replaceState(null, "", "/");
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleMobileThemeToggle = () => {
+    handleThemeToggle();
+    closeMenu();
   };
 
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(120,120,120,0.12),_transparent_34%),linear-gradient(180deg,var(--surface)_0%,var(--background)_100%)] text-[var(--foreground)] transition-colors duration-300">
       <header className="sticky top-0 z-30 w-full border-b border-[var(--border)] bg-[color-mix(in_srgb,var(--background)_88%,transparent)] backdrop-blur">
-        <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-4 sm:flex-nowrap sm:px-8 lg:px-10">
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 py-2 sm:px-8 lg:px-10">
           <Link href="/" className="shrink-0" aria-label="Go to homepage" onClick={handleLogoClick}>
             <Image
               src={theme === "dark" ? "/mk-logos/light.jpg" : "/mk-logos/dark.jpg"}
               alt="MK logo"
-              width={56}
-              height={56}
-              className="h-12 w-auto rounded-lg border border-[var(--border)] object-cover"
+              width={40}
+              height={40}
+              className="h-10 w-auto rounded-lg border border-[var(--border)] object-cover"
               priority
             />
           </Link>
 
-          <nav aria-label="Section navigation" className="order-3 flex w-full flex-wrap justify-center gap-2 sm:order-2 sm:w-auto">
-            <a href="#experience" className="rounded-full border border-[var(--border)] bg-[var(--card)] px-4 py-2 text-sm font-medium text-[var(--foreground)] transition hover:-translate-y-0.5">
-              Experience
-            </a>
-            <a href="#projects" className="rounded-full border border-[var(--border)] bg-[var(--card)] px-4 py-2 text-sm font-medium text-[var(--foreground)] transition hover:-translate-y-0.5">
-              Projects
-            </a>
-            <a href="#tech-stack" className="rounded-full border border-[var(--border)] bg-[var(--card)] px-4 py-2 text-sm font-medium text-[var(--foreground)] transition hover:-translate-y-0.5">
-              Tech Stack
-            </a>
-            <a href="#education" className="rounded-full border border-[var(--border)] bg-[var(--card)] px-4 py-2 text-sm font-medium text-[var(--foreground)] transition hover:-translate-y-0.5">
-              Education
-            </a>
-            <a href="#contact" className="rounded-full border border-[var(--border)] bg-[var(--card)] px-4 py-2 text-sm font-medium text-[var(--foreground)] transition hover:-translate-y-0.5">
-              Contact
-            </a>
+          <nav aria-label="Section navigation" className="hidden items-center gap-2 md:flex">
+            {navigationItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="rounded-full border border-[var(--border)] bg-[var(--card)] px-4 py-2 text-sm font-medium text-[var(--foreground)] transition hover:-translate-y-0.5"
+              >
+                {item.label}
+              </a>
+            ))}
           </nav>
 
-          <button
-            type="button"
-            onClick={handleThemeToggle}
-            className="order-2 inline-flex items-center rounded-full border border-[var(--border)] bg-[var(--card)] p-1.5 text-[var(--foreground)] transition hover:-translate-y-0.5 hover:shadow-sm sm:order-3"
-            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
-            aria-pressed={theme === "dark"}
-          >
-            <span className="relative inline-flex h-10 w-20 items-center rounded-full bg-[var(--accent-soft)] p-1.5">
-              <span
-                className={`absolute left-1 top-1 h-8 w-8 rounded-full bg-[var(--foreground)] transition-transform duration-300 ${
-                  theme === "dark" ? "translate-x-10" : "translate-x-0"
-                }`}
-              />
-              <span className="relative z-10 flex w-full items-center justify-between px-2 text-[var(--background)]">
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              onClick={handleThemeToggle}
+              className="hidden items-center rounded-full border border-[var(--border)] bg-[var(--card)] p-1 text-[var(--foreground)] transition hover:-translate-y-0.5 hover:shadow-sm md:inline-flex"
+              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+              aria-pressed={theme === "dark"}
+            >
+              <span className="relative inline-flex h-8 w-20 items-center rounded-full bg-[var(--accent-soft)] p-2">
+                <span
+                  className={`absolute h-6 w-8 rounded-full bg-[var(--foreground)] shadow-sm transition-transform duration-300 ${
+                    theme === "dark" ? "translate-x-8" : "translate-x-0"
+                  }`}
+                />
+                <span className="relative z-10 grid h-full w-full grid-cols-2 text-[var(--background)]">
+                  <span className="flex items-center justify-center">
+                    <FaSun size={10} />
+                  </span>
+                  <span className="flex items-center justify-center">
+                    <FaMoon size={10} />
+                  </span>
+                </span>
+              </span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setIsMenuOpen((currentState) => !currentState)}
+              className="inline-flex items-center justify-center rounded-full border border-[var(--border)] bg-[var(--card)] p-3 text-[var(--foreground)] transition hover:-translate-y-0.5 hover:shadow-sm md:hidden"
+              aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-navigation"
+            >
+              {isMenuOpen ? <FaXmark size={18} /> : <FaBars size={18} />}
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="mobile-navigation"
+          className={`border-t border-[var(--border)] bg-[color-mix(in_srgb,var(--background)_96%,transparent)] md:hidden ${
+            isMenuOpen ? "block" : "hidden"
+          }`}
+        >
+          <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-6 py-4 sm:px-8 lg:px-10">
+            <nav aria-label="Mobile section navigation" className="flex flex-col gap-2">
+              {navigationItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={closeMenu}
+                  className="rounded-2xl border border-[var(--border)] bg-[var(--card)] px-4 py-3 text-sm font-medium text-[var(--foreground)] transition hover:-translate-y-0.5"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+
+            <button
+              type="button"
+              onClick={handleMobileThemeToggle}
+              className="inline-flex items-center justify-between rounded-2xl border border-[var(--border)] bg-[var(--card)] px-4 py-3 text-sm font-medium text-[var(--foreground)] transition hover:-translate-y-0.5 hover:shadow-sm"
+              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+              aria-pressed={theme === "dark"}
+            >
+              <span>Theme</span>
+              <span className="inline-flex items-center gap-2 text-[var(--muted-strong)]">
                 <FaSun size={12} />
                 <FaMoon size={12} />
               </span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
       </header>
 
@@ -138,10 +204,21 @@ export default function Home() {
               <h2 className="mt-2 text-2xl font-semibold sm:text-3xl">Featured Projects</h2>
             </div>
           </div>
-          <div className="grid gap-5 md:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {featuredProjects.map((project) => (
-              <article key={project.name} className="rounded-3xl border border-[var(--border)] bg-[var(--card)] p-6 transition hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,0,0,0.06)]">
-                <div className="mb-5 h-24 rounded-2xl border border-dashed border-[var(--border)] bg-[var(--accent-soft)]" />
+              <a
+                key={project.name}
+                href={project.url}
+                className="group block rounded-3xl border border-[var(--border)] bg-[var(--card)] p-6 transition hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,0,0,0.06)]"
+                aria-label={`Open ${project.name}`}
+              >
+                <Image
+                  src={project.image}
+                  alt={`${project.name} preview`}
+                  width={300}
+                  height={96}
+                  className="mb-5 h-24 w-full rounded-2xl border border-[var(--border)] object-cover transition group-hover:opacity-95"
+                />
                 <h3 className="text-xl font-semibold">{project.name}</h3>
                 <p className="mt-3 text-sm leading-6 text-[var(--muted-strong)]">{project.summary}</p>
                 <div className="mt-5 flex flex-wrap gap-2">
@@ -151,7 +228,7 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         </section>

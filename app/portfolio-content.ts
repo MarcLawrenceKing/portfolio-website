@@ -2,16 +2,22 @@ export const featuredProjects = [
   {
     name: "Boto Mo 'To",
     summary: "Co-developed an online voting system, successfully implemented in a real-world election with 500+ voters, focusing on secure, accessible, and user-friendly voting for organizations.",
+    image: "/project-imgs/botomoto.jpg",
+    url: "https://github.com/Boto-Mo-To-Capstone-Project/BotoMoTo",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Prisma", "AWS S3", "Resend", "Vercel"],
   },
   {
     name: "Simple Mail Merge",
     summary: "Built a mail-merge web application, enabling 10+ students to send personalized OJT application emails efficiently.",
+    image: "/project-imgs/mailmerge.jpg",
+    url: "https://github.com/MarcLawrenceKing/mail-merge",
     stack: ["React", "Express", "Supabase", "Resend", "Vercel", "AWS Lambda", "API Gateway"],
   },
   {
     name: "Attendance Mo 'To",
     summary: "Co-developed an attendance tracking system, enabling efficient and structured recording of member attendance.",
+    image: "/project-imgs/attendance.jpg",
+    url: "https://github.com/MarcLawrenceKing/attendance-mo-to",
     stack: ["ASP .NET MVC", "MS SQL Server", "Entity Framework Core", "Bootstrap"],
   },
 ];
