@@ -1,65 +1,110 @@
 export const featuredProjects = [
   {
-    name: "Northstar Dashboard",
-    summary: "A clean analytics workspace for tracking product metrics, goals, and team updates.",
-    stack: ["Next.js", "TypeScript", "Tailwind"],
+    name: "Boto Mo 'To",
+    summary: "Co-developed an online voting system, successfully implemented in a real-world election with 500+ voters, focusing on secure, accessible, and user-friendly voting for organizations.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Prisma", "AWS S3", "Resend", "Vercel"],
   },
   {
-    name: "Signal Notes",
-    summary: "A lightweight notes app with shared workspaces, search, and fast capture flows.",
-    stack: ["React", "Postgres", "Prisma"],
+    name: "Simple Mail Merge",
+    summary: "Built a mail-merge web application, enabling 10+ students to send personalized OJT application emails efficiently.",
+    stack: ["React", "Express", "Supabase", "Resend", "Vercel", "AWS Lambda", "API Gateway"],
   },
   {
-    name: "Atlas Planner",
-    summary: "A project planning surface for roadmaps, milestones, and simple cross-team visibility.",
-    stack: ["Next.js", "APIs", "Design Systems"],
+    name: "Attendance Mo 'To",
+    summary: "Co-developed an attendance tracking system, enabling efficient and structured recording of member attendance.",
+    stack: ["ASP .NET MVC", "MS SQL Server", "Entity Framework Core", "Bootstrap"],
   },
 ];
 
 export const experience = [
   {
-    role: "Product Engineer",
-    company: "Fictional Studio",
-    period: "2023 - Present",
-    details: "Builds client-facing tools, internal dashboards, and polished landing experiences.",
+    role: "Fullstack Developer",
+    company: "Tambuli Labs, Quezon City - Internship",
+    period: "FEB 2026 - PRESENT",
+    details: [
+      {
+        title: "Developed a Dental Info System:",
+        text: "Built a Django, React, PostgreSQL, and Keycloak system to digitize and centralize clinic operations, replacing paper workflows.",
+      },
+      {
+        title: "Led Client Alignment:",
+        text: "Conducted system demos and feedback sessions to ensure software aligned with real-world dental clinic operations.",
+      },
+      {
+        title: "Managed On-Premise Deployment:",
+        text: "Deployed the dental system via Docker, configured secure SSH access over Tailscale, and managed infrastructure using Nutanix.",
+      },
+    ],
   },
   {
-    role: "Frontend Developer",
-    company: "Mock Labs",
-    period: "2021 - 2023",
-    details: "Shipped design systems, improved accessibility, and simplified complex workflows.",
+    role: "Fullstack Developer",
+    company: "C8nnect IT Solutions, Remote - Internship",
+    period: "DEC 2025 - MAR 2026",
+    details: [
+      {
+        title: "Co-Built a Multi-Tenant HRIS:",
+        text: "Developed features using React, Express, and Supabase, and eliminated database errors by implementing a structured Drizzle ORM migration workflow.",
+      },
+    ],  
   },
   {
-    role: "Web Intern",
-    company: "Sample Agency",
-    period: "2020 - 2021",
-    details: "Created marketing pages, UI components, and reusable content sections.",
+    role: "Programmer / Developer",
+    company: "DOST Central Office, Remote - Internship",
+    period: "JUN  2025 - SEP 2025",
+    details: [
+      {
+        title: "Developed an Intern Management System:",
+        text: "Built a full-stack Laravel and MySQL application with structured CRUD operations and a real-time data dashboard to eliminate direct database manipulation.",
+      },
+    ],  
   },
 ];
 
-export const techStack = ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "Postgres", "Prisma", "Figma"];
-
-export const buildSystems = [
-  "Start with the simplest shape that can support growth.",
-  "Separate content, presentation, and data as early as possible.",
-  "Design for fast iteration, clear ownership, and easy maintenance.",
-  "Validate flows with real constraints before adding polish.",
+export const techStack = [
+  {
+    category: "Frontend",
+    items: ["React.js", "Next.js", "Livewire"],
+  },
+  {
+    category: "Backend",
+    items: ["Express.js", "Laravel", "Django REST Framework", "ASP .NET MVC Webapp"],
+  },
+  {
+    category: "Databases",
+    items: ["MySQL", "PostgreSQL"],
+  },
+  {
+    category: "Authentication & IAM",
+    items: ["Keycloak"],
+  },
+  {
+    category: "Deployment",
+    items: ["Docker", "Tailscale VPN", "Vercel", "Supabase", "AWS Lambda", "AWS API Gateway"],
+  },
+  {
+    category: "Infrastructure",
+    items: ["Linux", "SSH", "Virtualization (Nutanix, VirtualBox)"],
+  },
+  {
+    category: "Version Control",
+    items: ["Git"],
+  },
 ];
 
 export const awardsAndEducation = [
   {
-    title: "Bachelor of Science in Computer Science",
-    place: "State University",
-    note: "Focused on software design, human-computer interaction, and web systems.",
+    title: "BS in Information Technology (2022-2026)",
+    place: "Polytechnic University of the Philippines Main Campus",
+    note: "Served in leadership roles across multiple student organizations; with exposure to software development, database management, networking, and cybersecurity.",
   },
   {
-    title: "Design Systems Award",
-    place: "Mock Product Conference",
-    note: "Recognized for a clean component library and strong cross-team adoption.",
+    title: "DOST RA 7687 Scholar",
+    place: "Department of Science and Technology, Science Education Institute",
+    note: "Awarded to students pursuing priority STEM degrees in the Philippines.",
   },
   {
-    title: "Best Portfolio Concept",
-    place: "Online Showcase",
-    note: "Selected for a simple, effective presentation of projects and process.",
+    title: "Java Programming NC III Course Completion",
+    place: "Joysis Techvoc Inc.",
+    note: "Completed a 30-day course under TESDA.",
   },
 ];

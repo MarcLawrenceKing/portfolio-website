@@ -12,6 +12,7 @@ export function toggleTheme() {
 
   root.dataset.theme = nextTheme;
   window.localStorage.setItem("theme", nextTheme);
+  window.dispatchEvent(new Event("themechange"));
 }
 
 export function initializeTheme() {
@@ -24,4 +25,23 @@ export function initializeTheme() {
         : "light";
 
   document.documentElement.dataset.theme = preferredTheme;
+}
+
+
+export function subscribeThemeChange(callback: () => void) {
+  window.addEventListener("storage", callback);
+  window.addEventListener("themechange", callback as EventListener);
+
+  return () => {
+    window.removeEventListener("storage", callback);
+    window.removeEventListener("themechange", callback as EventListener);
+  };
+}
+
+export function getThemeSnapshot() {
+  return document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+}
+
+export function getServerThemeSnapshot() {
+  return "light";
 }
