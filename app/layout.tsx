@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "A simple single-page portfolio with light and dark mode.",
+  title: "Marc Lawrence King",
+  description: "I build scalable full-stack web applications with real-world deployment experience in cloud and on-premise environments.",
 };
 
 export default function RootLayout({

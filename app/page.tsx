@@ -159,7 +159,7 @@ export default function Home() {
                 Marc Lawrence King
               </h1>
               <p className="max-w-2xl text-base leading-7 text-[var(--muted-strong)] sm:text-lg">
-                I build scalable web applications with real-world deployment experience in cloud and on-premise environments.
+                I build scalable full-stack web applications with real-world deployment experience in cloud and on-premise environments.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
