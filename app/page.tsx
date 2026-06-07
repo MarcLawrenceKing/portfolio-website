@@ -163,8 +163,13 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <a href="#projects" className="rounded-full bg-[var(--foreground)] px-5 py-3 text-sm font-medium text-[var(--background)] transition hover:opacity-90">
-                View Projects
+              <a
+                href="/Resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full bg-[var(--foreground)] px-5 py-3 text-sm font-medium text-[var(--background)] transition hover:opacity-90"
+              >
+                Download Resume
               </a>
               <a href="#contact" className="rounded-full border border-[var(--border)] bg-[var(--card)] px-5 py-3 text-sm font-medium text-[var(--foreground)] transition hover:-translate-y-0.5">
                 Contact Me
