@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`} suppressHydrationWarning>
+    <html lang="en" data-theme="light" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`} suppressHydrationWarning>
       <head>
         <Script id="theme-init" strategy="beforeInteractive">
           {`(() => {
@@ -32,12 +32,10 @@ export default function RootLayout({
               const storedTheme = localStorage.getItem('theme');
               const preferredTheme = storedTheme === 'light' || storedTheme === 'dark'
                 ? storedTheme
-                : window.matchMedia('(prefers-color-scheme: dark)').matches
-                  ? 'dark'
-                  : 'light';
+                : 'light';
               document.documentElement.dataset.theme = preferredTheme;
             } catch (error) {
-              document.documentElement.dataset.theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+              document.documentElement.dataset.theme = 'light';
             }
           })();`}
         </Script>
