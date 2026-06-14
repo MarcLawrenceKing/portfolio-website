@@ -9,6 +9,8 @@
   --muted-strong: #49433c;
   --border: rgba(20, 20, 20, 0.12);
   --accent-soft: rgba(20, 20, 20, 0.05);
+  --hero-light: #f5f1ea;
+  --hero-dark: #0f1115;
   color-scheme: light;
 }
 
@@ -28,6 +30,8 @@
   --muted-strong: #d0c8bc;
   --border: rgba(245, 243, 238, 0.12);
   --accent-soft: rgba(255, 255, 255, 0.05);
+  --hero-light: #0f1115;
+  --hero-dark: #f5f1ea;
   color-scheme: dark;
 }
 
@@ -41,6 +45,8 @@
     --muted-strong: #d0c8bc;
     --border: rgba(245, 243, 238, 0.12);
     --accent-soft: rgba(255, 255, 255, 0.05);
+    --hero-light: #0f1115;
+    --hero-dark: #f5f1ea;
     color-scheme: dark;
   }
 }
@@ -59,4 +65,95 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+/* hero picture styles */
+
+/* utility aliases (kept, but grouped) */
+.d-flex { @apply flex; }
+.justify-content-center { @apply justify-center; }
+.mt-5 { @apply mt-12; }
+.mt-xxl-0 { @apply mt-0; }
+
+/* gradient stays normal CSS (good choice) */
+.bg-gradient-primary-to-secondary {
+  background: linear-gradient(205deg, var(--hero-dark), var(--hero-light));
+}
+
+/* base profile */
+.profile {
+  @apply relative mt-[5vw] rounded-[5vw] max-w-screen-sm max-h-[40rem];
+  width: 75vw;
+  height: 75vw;
+}
+
+.profile .profile-img {
+  @apply absolute left-2/4 -translate-x-2/4 bottom-0 max-h-[45rem];
+  height: 80vw;
+}
+
+.profile .profile-img,
+.profile .dots-1 svg,
+.profile .dots-2 svg,
+.profile .dots-3 svg,
+.profile .dots-4 svg {
+  transition: fill 200ms ease, filter 200ms ease, opacity 200ms ease, transform 200ms ease;
+}
+
+/* dots (define once, override only what changes) */
+.profile .dots-1,
+.profile .dots-2,
+.profile .dots-3,
+.profile .dots-4 {
+  @apply absolute;
+  width: 3vw;
+}
+
+.profile .dots-1 { right: 1.5vw; top: 4vw; }
+.profile .dots-2 { right: -4vw; top: 6.05vw; }
+.profile .dots-3 { left: 1.5vw; bottom: 6.05vw; }
+.profile .dots-4 { left: -4vw; bottom: 4vw; }
+
+/* svg colors */
+.profile .dots-1 svg,
+.profile .dots-3 svg {
+  fill: var(--hero-light);
+}
+
+.profile .dots-2 svg,
+.profile .dots-4 svg {
+  fill: var(--hero-dark);
+}
+
+/* breakpoints — ONLY override what changes */
+@media (min-width: 576px) {
+  .profile { width: 60vw; height: 60vw; }
+  .profile .profile-img { height: 65vw; }
+}
+
+@media (min-width: 768px) {
+  .profile { width: 50vw; height: 50vw; }
+  .profile .profile-img { height: 55vw; }
+}
+
+@media (min-width: 992px) {
+  .profile { width: 40vw; height: 40vw; }
+  .profile .profile-img { height: 45vw; }
+
+  .profile .dots-1,
+  .profile .dots-2,
+  .profile .dots-3,
+  .profile .dots-4 {
+    width: 1.5vw;
+  }
+
+  .profile .dots-1 { right: 0.75vw; }
+  .profile .dots-2 { right: -2vw; }
+  .profile .dots-3 { left: 0.75vw; }
+  .profile .dots-4 { left: -2vw; }
+}
+
+@media (min-width: 1200px) {
+  .profile { width: 35vw; height: 35vw; }
+  .profile .profile-img { height: 40vw; }
 }

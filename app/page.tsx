@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import HeroPicture from "./HeroPicture";
 import { useState, useSyncExternalStore } from "react";
 import { FaBars, FaMoon, FaSun, FaXmark } from "react-icons/fa6";
 import { awardsAndEducation, experience, featuredProjects, techStack } from "./portfolio-content";
@@ -146,7 +147,7 @@ export default function Home() {
       </header>
 
       <div className="mx-auto flex w-full max-w-6xl flex-col px-6 py-6 sm:px-8 lg:px-10">
-        <section className="grid gap-10 py-10 lg:grid-cols-[1.3fr_0.7fr] lg:items-end lg:py-16">
+        <section className="grid gap-10 lg:gap-15 lg:grid-cols-[1.3fr_0.7fr] lg:items-center">
           <div className="max-w-3xl space-y-6">
             <p className="inline-flex rounded-full border border-[var(--border)] bg-[var(--card)] px-4 py-2 text-sm text-[var(--muted)]">
               Full Stack Web Developer 
@@ -176,6 +177,10 @@ export default function Home() {
               </a>
             </div>
           </div>
+          <div className="xl:scale-90 origin-top">
+            <HeroPicture />
+          </div>
+          
 
         </section>
 
