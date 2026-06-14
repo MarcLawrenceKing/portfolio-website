@@ -1,25 +1,55 @@
 export const featuredProjects = [
   {
-    name: "Boto Mo 'To",
+    name: "Boto Mo 'To (2026)",
     summary: "Co-developed an online voting system, successfully implemented in a real-world election with 500+ voters, focusing on secure, accessible, and user-friendly voting for organizations.",
-    image: "/project-imgs/botomoto.jpg",
+    image: "/project-imgs/botomoto.png",
     url: "https://github.com/Boto-Mo-To-Capstone-Project/BotoMoTo",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Prisma", "AWS S3", "Resend", "Vercel"],
   },
   {
-    name: "Simple Mail Merge",
+    name: "Simple Mail Merge (2026)",
     summary: "Built a mail-merge web application, enabling 10+ students to send personalized OJT application emails efficiently.",
-    image: "/project-imgs/mailmerge.jpg",
+    image: "/project-imgs/mailmerge.png",
     url: "https://github.com/MarcLawrenceKing/mail-merge",
     stack: ["React", "Express", "Supabase", "Resend", "Vercel", "AWS Lambda", "API Gateway"],
   },
   {
-    name: "Attendance Mo 'To",
+    name: "Portfolio Website (2026)",
+    summary: "Designed and developed a personal portfolio website with built-in SEO optimization to improve online visibility and strengthen job application presence, featuring a responsive design with light and dark mode support for an enhanced user experience across devices.",
+    image: "/project-imgs/portfolio.png",
+    url: "https://github.com/MarcLawrenceKing/portfolio-website/tree/v3",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+  },
+  {
+    name: "Attendance Mo 'To (2025)",
     summary: "Co-developed an attendance tracking system, enabling efficient and structured recording of member attendance.",
-    image: "/project-imgs/attendance.jpg",
+    image: "/project-imgs/attendance.png",
     url: "https://github.com/MarcLawrenceKing/attendance-mo-to",
     stack: ["ASP .NET MVC", "MS SQL Server", "Entity Framework Core", "Bootstrap"],
   },
+
+  {
+    name: "Sparkfest Website (2025)",
+    summary: "Contributed to the development of the official hackathon website for Google Developer Groups on Campus - PUP using Vite + React and Tailwind CSS.",
+    image: "/project-imgs/sparkfest.png",
+    url: "https://github.com/Google-DSC-PUP/sparkfest-2025",
+    stack: ["React.js", "TypeScript", "Tailwind CSS", "Vite"],
+  },
+  {
+    name: "ExQuizSeat - Mobile Quiz App (2024)",
+    summary: "Co-developed a mobile quiz application using React Native for an intercollegiate Android app development competition.",
+    image: "/project-imgs/exquizseat.png",
+    url: "https://docs.google.com/document/d/1ItywXoAIUPukKYIV-g_E0Ep7Xno2eD18i2qK0oyJLRg/edit?tab=t.0",
+    stack: ["React Native CLI", "Github"],
+  },
+  {
+    name: "Tableau Flood Visualization (2024)",
+    summary: "Created an interactive dashboard as part of the Data Management Workshop by MapaKalamidadPH in September 2024, showcasing flood data from January and February 2023.",
+    image: "/project-imgs/tableau.png",
+    url: "https://public.tableau.com/app/profile/marc.king4953/viz/Mapakalamidad/Dashboard1?publish=yes&fbclid=IwY2xjawJcY5RleHRuA2FlbQIxMQABHfpbxiw2-b8CGOMzuU7Dv12C9bOlGpWk1-CzTt5wGWnTGqUTm5UZeCRaCg_aem_xhjXzk7Ro5D08PRaBSn6oA",
+    stack: ["Tableau"],
+  },
+
 ];
 
 export const experience = [

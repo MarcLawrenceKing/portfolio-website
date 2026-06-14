@@ -219,6 +219,7 @@ export default function Home() {
               <a
                 key={project.name}
                 href={project.url}
+                target="_blank"
                 className="group block rounded-3xl border border-[var(--border)] bg-[var(--card)] p-6 transition hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,0,0,0.06)]"
                 aria-label={`Open ${project.name}`}
               >
