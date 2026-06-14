@@ -30,14 +30,14 @@ export const featuredProjects = [
 
   {
     name: "Sparkfest Website (2025)",
-    summary: "Contributed to the development of the official hackathon website for Google Developer Groups on Campus - PUP using Vite + React and Tailwind CSS.",
+    summary: "Contributed to the development of the official hackathon website for Google Developer Groups on Campus - PUP.",
     image: "/project-imgs/sparkfest.png",
     url: "https://github.com/Google-DSC-PUP/sparkfest-2025",
     stack: ["React.js", "TypeScript", "Tailwind CSS", "Vite"],
   },
   {
     name: "ExQuizSeat - Mobile Quiz App (2024)",
-    summary: "Co-developed a mobile quiz application using React Native for an intercollegiate Android app development competition.",
+    summary: "Co-developed a mobile quiz application for an intercollegiate Android app development competition.",
     image: "/project-imgs/exquizseat.png",
     url: "https://docs.google.com/document/d/1ItywXoAIUPukKYIV-g_E0Ep7Xno2eD18i2qK0oyJLRg/edit?tab=t.0",
     stack: ["React Native CLI", "Github"],
