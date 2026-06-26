@@ -59,8 +59,8 @@ export const experience = [
     period: "FEB 2026 - PRESENT",
     details: [
       {
-        title: "Developed a Dental Info System:",
-        text: "Built a Django, React, PostgreSQL, and Keycloak system to digitize and centralize clinic operations, replacing paper workflows.",
+        title: "Developed a Government Dental Info System:",
+        text: "Built a Django, React, PostgreSQL, and Keycloak-based web application designed to support 10,000+ users, digitizing and centralizing clinic operations while replacing paper-based workflows.",
       },
       {
         title: "Led Client Alignment:",
@@ -79,7 +79,7 @@ export const experience = [
     details: [
       {
         title: "Co-Built a Multi-Tenant HRIS:",
-        text: "Developed features using React, Express, and Supabase, and eliminated database errors by implementing a structured Drizzle ORM migration workflow.",
+        text: "Developed features using React, Express, and Supabase, and implemented a structured Drizzle ORM migration workflow to eliminate database inconsistencies; the system is currently used by 2+ companies.",
       },
     ],  
   },
@@ -90,7 +90,7 @@ export const experience = [
     details: [
       {
         title: "Developed an Intern Management System:",
-        text: "Built a full-stack Laravel and MySQL application with structured CRUD operations and a real-time data dashboard to eliminate direct database manipulation.",
+        text: "Built a full-stack Laravel and MySQL application with structured CRUD operations and a real-time dashboard; the system is actively used by DOST-SEI to manage intern information.",
       },
     ],  
   },
