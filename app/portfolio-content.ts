@@ -56,7 +56,7 @@ export const experience = [
   {
     role: "Fullstack Developer",
     company: "Tambuli Labs, Quezon City - Internship",
-    period: "FEB 2026 - PRESENT",
+    period: "FEB 2026 - JUN 2026",
     details: [
       {
         title: "Developed a Government Dental Info System:",
@@ -131,7 +131,7 @@ export const awardsAndEducation = [
   {
     title: "BS in Information Technology (2022-2026)",
     place: "Polytechnic University of the Philippines Main Campus",
-    note: "Served in leadership roles across multiple student organizations; with exposure to software development, database management, networking, and cybersecurity.",
+    note: "Graduating Magna Cum Laude (GWA: 1.26). Served in leadership roles across multiple student organizations; with exposure to software development, database management, networking, and cybersecurity.",
   },
   {
     title: "DOST RA 7687 Scholar",
