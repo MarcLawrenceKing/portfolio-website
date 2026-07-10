@@ -45,7 +45,7 @@ export default function Home() {
                 rel="noreferrer"
                 className="rounded-full bg-[var(--foreground)] px-5 py-3 text-sm font-medium text-[var(--background)] transition hover:opacity-90"
               >
-                Download Resume
+                View Resume
               </a>
               <a href="#contact" className="rounded-full border border-[var(--border)] bg-[var(--card)] px-5 py-3 text-sm font-medium text-[var(--foreground)] transition hover:-translate-y-0.5">
                 Contact Me
